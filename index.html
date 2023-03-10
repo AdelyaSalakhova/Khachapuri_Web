@@ -51,10 +51,10 @@
 </div>
 <div class="grad container">
     <div class="row justify-content-center py-5">
-        <span class="col-6 d-none d-lg-block">
+        <div class="col-6 d-none d-lg-block">
             <img class="img-fluid " src="img/img1.jpg" alt="">
-        </span>
-        <span class="col-lg-6 col-sm-12 text-center">
+        </div>
+        <div class="col-lg-6 col-sm-12 text-center">
             <div>
                 <h1>Кавказская кухня</h1><hr>
                 Кавказская кухня является одной из самых разнообразных и уникальных кухонь мира, объединяющей кулинарные традиции множества народов, проживающих на Кавказе.
@@ -62,14 +62,140 @@
                 Одной из особенностей кавказской кухни является ее оригинальность. Каждый регион Кавказа имеет свои уникальные блюда,
                 которые могут варьироваться от региона к региону, но всегда отличаются высоким качеством и необычными сочетаниями продуктов.
             </div>
-        </span>
+        </div>
     </div>
 </div>
 <div class = "parallax">
     <div class="parallax-img"></div>
 </div>
 <div class="container-fluid block">
-    Ура я добавил паралакс
+    <div class="row justify-content-between">
+        <div class="col-3">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Категории рецептов
+            </button>
+        </div>
+        <form class="d-flex col-4" role="search">
+            <input class="form-control me-2" type="search" placeholder="Рецепт/продукт" aria-label="Search">
+            <button class="btn btn-outline-success" type="button">Поиск</button>
+        </form>
+    </div>
+    <form>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body d-inline-block">
+                <ul class="col-4 p-auto me-0">
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckArmyan">
+                        <label class="form-check-label" for="flexCheckArmyan">
+                            Армянская кухня
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckAzer">
+                        <label class="form-check-label" for="flexCheckAzer">
+                            Азербайджанская кухня
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckGruz">
+                        <label class="form-check-label" for="flexCheckGruz">
+                            Грузинская кухня
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckAvar">
+                        <label class="form-check-label" for="flexCheckAvar">
+                            Аварская кухня
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckLezg">
+                        <label class="form-check-label" for="flexCheckLezg">
+                            Лезгинская кухня
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckKabard">
+                        <label class="form-check-label" for="flexCheckKabard">
+                            Кабардинская кухня
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckOsetin">
+                        <label class="form-check-label" for="flexCheckOsetin">
+                            Осетинская кухня
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCherk">
+                        <label class="form-check-label" for="flexCheckCherk">
+                            Черкесская кухня
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDag">
+                        <label class="form-check-label" for="flexCheckDag">
+                            Дагестанская кухня
+                        </label>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="col-4 p-auto me-0">
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckSoup">
+                        <label class="form-check-label" for="flexCheckSoup">
+                            Супы
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckSnacks">
+                        <label class="form-check-label" for="flexCheckSnacks">
+                            Закуски
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckMain">
+                        <label class="form-check-label" for="flexCheckMain">
+                            Основные блюда
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckFlour">
+                        <label class="form-check-label" for="flexCheckFlour">
+                            Мучные изделия
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckSweet">
+                        <label class="form-check-label" for="flexCheckSweet">
+                            Сладости
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckSalad">
+                        <label class="form-check-label" for="flexCheckSalad">
+                            Салаты
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckVegan">
+                        <label class="form-check-label" for="flexCheckVegan">
+                            Вегатерианские блюда
+                        </label>
+                    </li>
+                    <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckMeat">
+                        <label class="form-check-label" for="flexCheckMeat">
+                            Мясные блюда
+                        </label>
+                    </li>
+                </ul>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>
