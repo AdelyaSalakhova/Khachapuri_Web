@@ -37,26 +37,30 @@ body{
     background-color: rgb(252,231,140);
     border: none;
     color:rgb(185, 88, 40);
-    padding: 20px;
-    font-size: 15pt;
+    height: 100%;
+    width: 100%;
 }
 
 .gender {
     display: flex;
     flex-direction: row;
-    margin-right: 10%;
-    margin-left: 10%;
+    width: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
-.gender .input-group {
-    padding: 0;
+.gender .input-group-text {
+    background-color: rgb(252,231,140);
+    border: none;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
-.form-check-input {
+.gender .form-check-input {
     background-color: rgb(252,231,140);
 }
 
-.form-check-input:checked {
+.gender .form-check-input:checked {
     background-color: rgb(185, 88, 40);
     border: none;
 }
@@ -70,10 +74,19 @@ body{
     margin-left: 10%;
 }
 
+.gender .form-check {
+    margin-bottom: 0;
+}
+
 .input-group {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 5%;
     padding-bottom: 2%;
+    padding-right: 5%;
+}
+
+.wrapper .input-group {
+    width: 50%;
+    height: 10vh;
 }
 
 .wrapper h1 {
@@ -98,7 +111,8 @@ body{
 .nav-item-1 .nav-link:hover {
     border: 2px solid rgb(185, 88, 40);
     color: rgb(185, 88, 40);
-    height: 9vh;
+    transform: scale(1.5); 
+    transition: all 1s;
 }
 
 p{
@@ -116,6 +130,7 @@ p{
     font-size: 15px;
     background-color: black;
     border-collapse: collapse;
+    font-weight: bold;
 }
 
 .navbar .navbar-nav .nav-link{
@@ -123,40 +138,29 @@ p{
 }
 
 .navbar-nav{
-    width: 100%;
+    max-width: 100%;
 }
 
 #navbar .navbar-nav {
     background-color: black;
     border-radius: 20px 0px 0px 0px;
-    width: 61vh;
 }
 
 .navbar .top-menu li a{
     color: black;
 }
-.navbar .top-menu li a:hover{
-    color: rgb(185, 88, 40);
-    transition: all 0.3s;
-}
- 
-.modal-backdrop {
-    z-index: -1;
-}
-.modal-footer {
-    justify-content: center;
-}
  
 .btn{
-    width: 80%;
+    width: 40%;
     padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: none;
 }
  
 .btn-primary {
     background-color: rgb(252,231,140);
     color: black;
-    border: none;
-    transition: all 0.5s;
     height: 5vh;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -164,7 +168,10 @@ p{
 
 .btn-primary:hover {
     color: rgb(185, 88, 40);
+    border: none;
     background-color: rgb(252,231,140);
+    box-shadow: 0 0 0 9px black, 0 0 0 12px rgb(185, 88, 40);
+    transition: all 1s;
 }
 
  
@@ -179,14 +186,7 @@ p{
         left: 150%;
     }
 }
- 
-/* Header */
- 
-/*Body*/
-.grad {
-    width: 100%;
-    height: 200px;
- 
-    background: rgb(252,231,140);
-    background: linear-gradient(180deg, rgb(252,231,140) 0%, rgb(253,222,87) 100%);
+
+@media only screen and (max-width: 600px) {
+    
 }
