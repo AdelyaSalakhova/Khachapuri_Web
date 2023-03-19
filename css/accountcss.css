@@ -11,7 +11,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 160vh;
+    height: 180vh;
 }
 
 .Romanusgrad { 
@@ -45,8 +45,10 @@ body{
     display: flex;
     flex-direction: row;
     width: 50%;
-    margin-right: 5%;
-    margin-left: 5%;
+    height: 10vh;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    padding-right: 5%;
 }
 
 .gender .input-group-text {
