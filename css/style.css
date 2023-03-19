@@ -4,7 +4,7 @@ html{
 
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 400;
     color: black;
     min-width: 320px;
@@ -78,31 +78,6 @@ body{
     justify-content: center;
 }
 
-/*.btn-secondary .flare {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 45px;
-    transform: skewX(-30deg);
-    animation: flareAnimation;
-    left: -150%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
-    animation: flareAnimation 3s infinite ease-in;
-}
-
-@keyframes flareAnimation {
-    0% {
-        left: -150%;
-    }
-    50% {
-        left: 150%;
-    }
-    100% {
-        left: 150%;
-    }
-}*/
-/* Header */
-
 /*Body*/
 .grad {
     width: 100%;
@@ -152,5 +127,218 @@ body{
 .card ul {
     width: 100%;
 }
-    /*background: linear-gradient(180deg, rgb(252,231,140) 0%, rgb(253,222,87) 100%);*/
-/*Body*/
+
+/* Adelya */
+
+body{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+ 
+
+.wrapper {
+    background-color: black;
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+    color: #fce78c;
+}
+
+.wrapper .input-group input{
+    background-color: rgb(252,231,140);
+    border: none;
+    color:rgb(185, 88, 40);
+    height: 100%;
+    width: 100%;
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 10vh;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+}
+
+.gender .input-group-text {
+    background-color: rgb(252,231,140);
+    border: none;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.gender .form-check-input {
+    background-color: rgb(252,231,140);
+}
+
+.gender .form-check-input:checked {
+    background-color: rgb(185, 88, 40);
+    border: none;
+}
+
+.wrapper .input-group input::placeholder {
+    color: black;
+}
+
+.wrapper .form-check{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.gender .form-check {
+    margin-bottom: 0;
+}
+
+.input-group {
+    padding-left: 5%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+}
+
+.wrapper .input-group {
+    width: 50%;
+    height: 10vh;
+}
+
+.wrapper h1 {
+    margin: 3%;
+    font-weight: 700;
+}
+
+.wrapper hr {
+    border-top: 3px double black;
+    border: 2px solid rgb(252,231,140);
+    overflow: visible;
+    height: 5px;
+}
+
+.navbar{
+    margin: 0  auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-item-1 .nav-link:hover {
+    border: 2px solid rgb(185, 88, 40);
+    color: rgb(185, 88, 40);
+    transform: scale(1.5); 
+    transition: all 1s;
+}
+
+p{
+    margin: 5%;
+}
+
+.nav-item-1 .nav-link{
+    color: rgb(252,231,140);
+    text-align: center;
+    border: 2px solid rgb(252,231,140);
+    border-radius: 20px 0px 0px 0px;
+    height: 7vh;
+    width: 20vh;
+    margin: 2%;
+    font-size: 15px;
+    background-color: black;
+    border-collapse: collapse;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link{
+    font-weight: 400;
+}
+
+.navbar-nav{
+    max-width: 100%;
+}
+
+#navbarA .navbar-nav {
+    background-color: black;
+    border-radius: 20px 0px 0px 0px;
+}
+
+.btn{
+    width: 40%;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: none;
+}
+ 
+.btn-primary {
+    background-color: rgb(252,231,140);
+    color: black;
+    height: 5vh;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btn-primary:hover {
+    color: rgb(185, 88, 40);
+    border: none;
+    background-color: rgb(252,231,140);
+    box-shadow: 0 0 0 9px black, 0 0 0 12px rgb(185, 88, 40);
+    transition: all 1s;
+}
+
+.chel {
+    display: flex; 
+    float: right;
+}
+
+
+@media only screen and (max-width: 900px) {
+    #navbarA .navbar-nav {
+        display: block;
+        border-top: 2px solid rgb(252,231,140);
+        border-right: 2px solid rgb(252,231,140);
+        border-left: 2px solid rgb(252,231,140);
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .nav-item-1 {
+        width: 100%;
+    }
+
+    .row {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-item-1 .nav-link {
+        min-width: 96%;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .nav-link span svg {
+        width: 10%;
+    }
+
+    .nav-item-1 .nav-link:hover {
+        border: 2px solid rgb(185, 88, 40);
+        color: rgb(185, 88, 40);
+        transform: scale(1);
+    }
+
+    .chel {
+        display: flex;
+        float: none;
+        margin: 5%;
+        width: 90%;
+    }
+
+    .wrapper .input-group {
+        width: 100%;
+        height: 10vh;
+    }
+
+    .gender {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
