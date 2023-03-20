@@ -2,9 +2,19 @@ html{
     font-size: 16px;
 }
 
+.bg-foto {
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
     color: black;
     min-width: 320px;
@@ -20,6 +30,8 @@ body{
     display: flex;
     width: 100%;
 }
+
+
 .navbar{
     display: flex;
 }
@@ -128,15 +140,82 @@ body{
     width: 100%;
 }
 
-/* Adelya */
-
-body{
-    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.btn-categories {
+    color: black;
+    background-color: rgb(252, 231, 140);
+    border-color: black;
 }
- 
+
+.btn-categories:hover, .btn-categories:focus-visible, .btn-categories:active {
+    color: rgb(185, 88, 40);
+    border-color: rgb(185, 88, 40);
+    background-color: rgb(252, 231, 140);
+    transition: all 0.3s;
+    filter: brightness(110%);
+}
+
+
+footer {
+    width: 100%;
+    color: rgb(252, 231, 140);
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+footer h5 {
+    color: rgb(185, 88, 40);
+}
+
+footer a {
+    color: rgb(252, 231, 140);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(185, 88, 40);
+    transition: all .3s;
+}
+
+.pagination {
+    --bs-pagination-padding-x: 1rem;
+    --bs-pagination-padding-y: 0.5rem;
+    --bs-pagination-font-size: 1.2rem;
+    --bs-pagination-color: #000;
+    --bs-pagination-bg: rgb(252, 231, 140);
+    --bs-pagination-border-color: #000;
+    --bs-pagination-hover-color: rgb(185, 88, 40);
+    --bs-pagination-hover-bg: rgb(252, 231, 140), brightness(100%);
+    --bs-pagination-hover-border-color: rgb(185, 88, 40);
+    --bs-pagination-focus-color: rgb(185, 88, 40);
+    --bs-pagination-focus-bg: rgb(252, 231, 140), brightness(100%);
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25 rgb(185 88 40 / 25%);
+    --bs-pagination-active-color: #000;
+    --bs-pagination-active-bg: rgb(185, 88, 40);
+    --bs-pagination-active-border-color: #000;
+}
+
+#collapseCategories .form-check-input:checked {
+    background-color: rgb(185, 88, 40);
+    border-color: rgb(185, 88, 40);
+}
+
+#collapseCategories .form-check-input:focus {
+    border-color: rgb(185, 88, 40);
+    box-shadow: 0 0 0 0.25rem rgb(185 88 40 / 25%);
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color:  rgb(185, 88, 40);
+    background-color:  rgb(252, 231, 140);
+    border-color:  rgb(185, 88, 40);
+}
+
+.form-control:focus {
+    border-color: rgb(185, 88, 40);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(252 231 140 / 25%);
+}
+
+/* Adelya */
 
 .wrapper {
     background-color: black;
@@ -260,7 +339,7 @@ p{
     border-radius: 20px 0px 0px 0px;
 }
 
-.btn{
+.btn-acc{
     width: 40%;
     padding: 10px;
     margin-left: 5%;
@@ -268,7 +347,7 @@ p{
     border: none;
 }
  
-.btn-primary {
+.btn-acc {
     background-color: rgb(252,231,140);
     color: black;
     height: 5vh;
@@ -276,7 +355,7 @@ p{
     margin-bottom: 5%;
 }
 
-.btn-primary:hover {
+.btn-acc:hover {
     color: rgb(185, 88, 40);
     border: none;
     background-color: rgb(252,231,140);
