@@ -12,6 +12,7 @@ body{
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    color:  rgb(252,231,140);
 }
  
 /* Header */
