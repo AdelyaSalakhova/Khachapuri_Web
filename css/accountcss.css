@@ -1,17 +1,7 @@
 html{
     font-size: 16px;
 }
-
-.bg-foto {
-    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-}
-
+ 
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
@@ -23,28 +13,26 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
+ 
 /* Header */
 .full_header{
     background-color: rgb(252,231,140);
     display: flex;
     width: 100%;
 }
-
-
 .navbar{
     display: flex;
 }
-
+ 
 .navbar .navbar-nav .nav-link{
     font-weight: 400;
     padding: 10px 0;
 }
-
+ 
 .navbar .top-menu {
     flex: 1 1 auto;
     padding: 0 0 0 20px;
-
+ 
 }
 @media (max-width: 450px) {
     .top-menu img {
@@ -54,7 +42,7 @@ body{
         font-size: 24pt !important;
     }
 }
-
+ 
 @media (max-width: 300px) {
     .top-menu img {
         height: 40px !important;
@@ -68,10 +56,10 @@ body{
     }
     .navbar .top-menu {
         padding: 0 0 0 10px !important;
-
+ 
     }
 }
-
+ 
 .navbar .icon-menu li a{
     color: black;
 }
@@ -79,25 +67,23 @@ body{
     color: rgb(185, 88, 40);
     transition: all 0.3s;
 }
-
+ 
 .navbar .icon-menu {
     flex: 0 0 auto;
     padding: 0 40px 0 0;
     font-size: 28pt;
 }
-
-.modal-footer {
-    justify-content: center;
-}
-
+ 
+/* Header */
+ 
 /*Body*/
-.grad {
+.info-block {
     width: 100%;
     height: 920px;
     background-color: black;
     color: rgb(252, 231, 140);
 }
-.grad .row {
+.info-block .row {
     padding: 10px;
     overflow: hidden;
     height: 100%;
@@ -105,17 +91,17 @@ body{
     align-items: center;
     justify-content: center;
 }
-
-.grad .row hr{
+ 
+.info-block .row hr{
     height: 5px;
     background: rgb(252, 231, 140);
 }
-
-.grad .img {
+ 
+.info-block .img {
     height: auto;
     max-width: 100%;
 }
-
+ 
 .parallax-img {
     height: 100%;
     background-attachment: fixed;
@@ -129,23 +115,29 @@ body{
     width: 100%;
     height: 100%;
     color: black;
+    padding: 0;
 }
+ 
+.counties_list {
+    padding-left: 0;
+}
+ 
 .parallax {
     height: 100vh;
     width: 100vw;
     text-align: left;
 }
-
+ 
 .card ul {
     width: 100%;
 }
-
+ 
 .btn-categories {
     color: black;
     background-color: rgb(252, 231, 140);
     border-color: black;
 }
-
+ 
 .btn-categories:hover, .btn-categories:focus-visible, .btn-categories:active {
     color: rgb(185, 88, 40);
     border-color: rgb(185, 88, 40);
@@ -153,28 +145,29 @@ body{
     transition: all 0.3s;
     filter: brightness(110%);
 }
-
-
-footer {
-    width: 100%;
-    color: rgb(252, 231, 140);
-    background-color: rgba(0, 0, 0, 0.95);
+ 
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color:  rgb(185, 88, 40);
+    background-color:  rgb(252, 231, 140);
+    border-color:  rgb(185, 88, 40);
 }
-
-footer h5 {
-    color: rgb(185, 88, 40);
+ 
+.form-control:focus {
+    border-color: rgb(185, 88, 40);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(252 231 140 / 25%);
 }
-
-footer a {
-    color: rgb(252, 231, 140);
-    text-decoration: none;
+ 
+.form-check-input:checked {
+    background-color: rgb(185, 88, 40);
+    border-color: rgb(185, 88, 40);
 }
-
-footer a:hover {
-    color: rgb(185, 88, 40);
-    transition: all .3s;
+ 
+.form-check-input:focus {
+    border-color: rgb(185, 88, 40);
+    box-shadow: 0 0 0 0.25rem rgb(185 88 40 / 25%);
 }
-
+ 
 .pagination {
     --bs-pagination-padding-x: 1rem;
     --bs-pagination-padding-y: 0.5rem;
@@ -192,28 +185,54 @@ footer a:hover {
     --bs-pagination-active-bg: rgb(185, 88, 40);
     --bs-pagination-active-border-color: #000;
 }
-
-#collapseCategories .form-check-input:checked {
-    background-color: rgb(185, 88, 40);
-    border-color: rgb(185, 88, 40);
+    /*background: linear-gradient(180deg, rgb(252,231,140) 0%, rgb(253,222,87) 100%);*/
+/*Body*/
+ 
+/*Footer*/
+footer {
+    width: 100%;
+    color: rgb(252, 231, 140);
+    background-color: rgb(13,13,13);
 }
-
-#collapseCategories .form-check-input:focus {
-    border-color: rgb(185, 88, 40);
-    box-shadow: 0 0 0 0.25rem rgb(185 88 40 / 25%);
+ 
+footer h5 {
+    color: rgb(185, 88, 40);
 }
-
-.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
-    color:  rgb(185, 88, 40);
-    background-color:  rgb(252, 231, 140);
-    border-color:  rgb(185, 88, 40);
+ 
+footer a {
+    color: rgb(252, 231, 140);
+    text-decoration: none;
 }
-
-.form-control:focus {
-    border-color: rgb(185, 88, 40);
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem rgb(252 231 140 / 25%);
+ 
+footer a:hover {
+    color: rgb(185, 88, 40);
+    transition: all .3s;
 }
+ 
+/*.flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-30deg);
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 3s infinite ease-in;
+}
+ 
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    50% {
+        left: 150%;
+    }
+    100% {
+        left: 150%;
+    }
+}*/
+ 
+/*Footer*/
 
 /* Adelya */
 
