@@ -1,25 +1,142 @@
 html{
     font-size: 16px;
 }
- 
+
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     font-weight: 400;
-    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
+    color: black;
     min-width: 320px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 180vh;
+    background-color: black;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
- 
+
 /* Header */
 .full_header{
     background-color: rgb(252,231,140);
-    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+.navbar{
     display: flex;
 }
+
+.navbar .navbar-nav .nav-link{
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.navbar .top-menu {
+    flex: 1 1 auto;
+    padding: 0 0 0 20px;
+
+}
+@media (max-width: 450px) {
+    .top-menu img {
+        height: 50px !important;
+    }
+    .navbar .icon-menu {
+        font-size: 24pt !important;
+    }
+}
+
+@media (max-width: 300px) {
+    .top-menu img {
+        height: 40px !important;
+    }
+    body {
+        font-size: 16pt !important;
+    }
+    .navbar .icon-menu {
+        font-size: 20pt !important;
+        padding: 0 20px 0 0 !important;
+    }
+    .navbar .top-menu {
+        padding: 0 0 0 10px !important;
+
+    }
+}
+
+.navbar .icon-menu li a{
+    color: black;
+}
+.navbar .icon-menu li a:hover{
+    color: rgb(185, 88, 40);
+    transition: all 0.3s;
+}
+
+.navbar .icon-menu {
+    flex: 0 0 auto;
+    padding: 0 40px 0 0;
+    font-size: 28pt;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+/*Body*/
+.grad {
+    width: 100%;
+    height: 920px;
+    background-color: black;
+    color: rgb(252, 231, 140);
+}
+.grad .row {
+    padding: 10px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grad .row hr{
+    height: 5px;
+    background: rgb(252, 231, 140);
+}
+
+.grad .img {
+    height: auto;
+    max-width: 100%;
+}
+
+.parallax-img {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
+}
+.block {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+.parallax {
+    height: 100vh;
+    width: 100vw;
+    text-align: left;
+}
+
+.card ul {
+    width: 100%;
+}
+
+/* Adelya */
+
+body{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+ 
 
 .wrapper {
     background-color: black;
@@ -138,7 +255,7 @@ p{
     max-width: 100%;
 }
 
-#navbar .navbar-nav {
+#navbarA .navbar-nav {
     background-color: black;
     border-radius: 20px 0px 0px 0px;
 }
@@ -172,21 +289,9 @@ p{
     float: right;
 }
 
- 
-@keyframes flareAnimation {
-    0% {
-        left: -150%;
-    }
-    50% {
-        left: 150%;
-    }
-    100% {
-        left: 150%;
-    }
-}
 
 @media only screen and (max-width: 900px) {
-    #navbar .navbar-nav {
+    #navbarA .navbar-nav {
         display: block;
         border-top: 2px solid rgb(252,231,140);
         border-right: 2px solid rgb(252,231,140);
