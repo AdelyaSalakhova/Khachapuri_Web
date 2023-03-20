@@ -305,8 +305,11 @@ footer a:hover {
 .nav-item-1 .nav-link:hover {
     border: 2px solid rgb(185, 88, 40);
     color: rgb(185, 88, 40);
-    transform: scale(1.5); 
-    transition: all 1s;
+    transition: all 0.3s;
+}
+
+.nav-item-1 {
+    margin-right: 5px;
 }
 
 p{
@@ -317,7 +320,8 @@ p{
     color: rgb(252,231,140);
     text-align: center;
     border: 2px solid rgb(252,231,140);
-    border-radius: 20px 0px 0px 0px;
+    margin-right: 3px;
+    border-radius: 20px 20px 0px 0px;
     height: 7vh;
     width: 20vh;
     margin: 2%;
@@ -337,7 +341,8 @@ p{
 
 #navbarA .navbar-nav {
     background-color: black;
-    border-radius: 20px 0px 0px 0px;
+    padding-right: 3px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .btn-acc{
@@ -361,7 +366,7 @@ p{
     border: none;
     background-color: rgb(252,231,140);
     box-shadow: 0 0 0 9px black, 0 0 0 12px rgb(185, 88, 40);
-    transition: all 1s;
+    transition: all 0.3s;
 }
 
 .chel {
