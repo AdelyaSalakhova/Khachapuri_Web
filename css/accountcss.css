@@ -210,15 +210,14 @@ footer a:hover {
     transition: all .3s;
 }
  
-/*.flare {
+.btn-acc .flare {
     position: absolute;
-    top: 0;
-    height: 100%;
-    width: 45px;
+    height:100%;
+    width: 30px;
     transform: skewX(-30deg);
-    left: -150%;
+    animation: flareAnimation;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
-    animation: flareAnimation 3s infinite ease-in;
+    animation: flareAnimation 5s infinite ease-in;
 }
  
 @keyframes flareAnimation {
@@ -231,7 +230,7 @@ footer a:hover {
     100% {
         left: 150%;
     }
-}*/
+}
  
 /*Footer*/
 
