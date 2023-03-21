@@ -102,6 +102,72 @@ body{
     max-width: 100%;
 }
 
+.recipe-block {
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.wrapping {
+    background-color: #fff;
+}
+
+.carousel {
+    border: 2px black solid;
+}
+
+.carousel-item {
+    max-height: 400px;
+}
+
+
+.dish-name {
+    font-weight: 500;
+}
+
+.products-list {
+    font-size: 15pt;
+}
+
+.products-list ul {
+    width: 100%;
+}
+
+.products-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.extra-info {
+    font-size: 12pt;
+}
+
+.accordion {
+    --bs-accordion-btn-focus-border-color: rgba(252, 231, 140, 0.5);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25 rgba(252, 231, 140, 0.5);
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+}
+
+.accordion-button {
+    font-size: 20pt;
+    font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: rgba(252, 231, 140, 0.5);
+}
+
+.step img {
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border: 2px black solid;
+    float: left;
+    margin: 4px 20px 2px 0;
+}
+
 .parallax-img {
     height: 100%;
     background-attachment: fixed;
