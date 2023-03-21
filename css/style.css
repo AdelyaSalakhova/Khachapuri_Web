@@ -1,0 +1,436 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    min-width: 320px;
+    background-color: black;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Header */
+.full_header{
+    background-color: rgb(252,231,140);
+    display: flex;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+}
+
+.navbar .navbar-nav .nav-link{
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.navbar .top-menu {
+    flex: 1 1 auto;
+    padding: 0 0 0 20px;
+
+}
+@media (max-width: 450px) {
+    .top-menu img {
+        height: 50px !important;
+    }
+    .navbar .icon-menu {
+        font-size: 24pt !important;
+    }
+}
+
+@media (max-width: 300px) {
+    .top-menu img {
+        height: 40px !important;
+    }
+    body {
+        font-size: 16pt !important;
+    }
+    .navbar .icon-menu {
+        font-size: 20pt !important;
+        padding: 0 20px 0 0 !important;
+    }
+    .navbar .top-menu {
+        padding: 0 0 0 10px !important;
+
+    }
+}
+
+.navbar .icon-menu li a{
+    color: black;
+}
+.navbar .icon-menu li a:hover{
+    color: rgb(185, 88, 40);
+    transition: all 0.3s;
+}
+
+.navbar .icon-menu {
+    flex: 0 0 auto;
+    padding: 0 40px 0 0;
+    font-size: 28pt;
+}
+
+/* Header */
+
+/*Body*/
+.info-block {
+    width: 100%;
+    height: 920px;
+    background-color: black;
+    color: rgb(252, 231, 140);
+}
+.info-block .row {
+    padding: 10px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-block .row hr{
+    height: 5px;
+    background: rgb(252, 231, 140);
+}
+
+.info-block .img {
+    height: auto;
+    max-width: 100%;
+}
+
+.parallax-img {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
+}
+.block {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    color: black;
+    padding: 0;
+}
+
+.counties_list {
+    padding-left: 0;
+}
+
+.parallax {
+    height: 100vh;
+    width: 100vw;
+    text-align: left;
+}
+
+.card ul {
+    width: 100%;
+}
+
+.btn-categories {
+    color: black;
+    background-color: rgb(252, 231, 140);
+    border-color: black;
+}
+
+.btn-categories:hover, .btn-categories:focus-visible, .btn-categories:active {
+    color: rgb(185, 88, 40);
+    border-color: rgb(185, 88, 40);
+    background-color: rgb(252, 231, 140);
+    transition: all 0.3s;
+    filter: brightness(110%);
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color:  rgb(185, 88, 40);
+    background-color:  rgb(252, 231, 140);
+    border-color:  rgb(185, 88, 40);
+}
+
+.form-control:focus {
+    border-color: rgb(185, 88, 40);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(252 231 140 / 25%);
+}
+
+.form-check-input:checked {
+    background-color: rgb(185, 88, 40);
+    border-color: rgb(185, 88, 40);
+}
+
+.form-check-input:focus {
+    border-color: rgb(185, 88, 40);
+    box-shadow: 0 0 0 0.25rem rgb(185 88 40 / 25%);
+}
+
+.pagination {
+    --bs-pagination-padding-x: 1rem;
+    --bs-pagination-padding-y: 0.5rem;
+    --bs-pagination-font-size: 1.2rem;
+    --bs-pagination-color: #000;
+    --bs-pagination-bg: rgb(252, 231, 140);
+    --bs-pagination-border-color: #000;
+    --bs-pagination-hover-color: rgb(185, 88, 40);
+    --bs-pagination-hover-bg: rgb(252, 231, 140), brightness(100%);
+    --bs-pagination-hover-border-color: rgb(185, 88, 40);
+    --bs-pagination-focus-color: rgb(185, 88, 40);
+    --bs-pagination-focus-bg: rgb(252, 231, 140), brightness(100%);
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25 rgb(185 88 40 / 25%);
+    --bs-pagination-active-color: #000;
+    --bs-pagination-active-bg: rgb(185, 88, 40);
+    --bs-pagination-active-border-color: #000;
+}
+/*Body*/
+
+/*Footer*/
+footer {
+    width: 100%;
+    color: rgb(252, 231, 140);
+    background-color: rgb(13,13,13);
+}
+
+footer h5 {
+    color: rgb(185, 88, 40);
+}
+
+footer a {
+    color: rgb(252, 231, 140);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(185, 88, 40);
+    transition: all .3s;
+}
+
+.btn-acc .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-30deg);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
+    animation: flareAnimation 3s infinite ease-in;
+}
+
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    50% {
+        left: 150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+/*Footer*/
+
+/* Adelya */
+
+.wrapper {
+    background-color: black;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    color: #fce78c;
+    margin-bottom: 15%;
+}
+
+.wrapper .input-group input{
+    background-color: rgb(252,231,140);
+    border: none;
+    color:rgb(185, 88, 40);
+    height: 100%;
+    width: 100%;
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 10vh;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+}
+
+.gender .input-group-text {
+    background-color: rgb(252,231,140);
+    border: none;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.gender .form-check-input {
+    background-color: rgb(252,231,140);
+}
+
+.gender .form-check-input:checked {
+    background-color: rgb(185, 88, 40);
+    border: none;
+}
+
+.wrapper .input-group input::placeholder {
+    color: black;
+}
+
+.wrapper .form-check{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.gender .form-check {
+    margin-bottom: 0;
+}
+
+.input-group {
+    padding-left: 5%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+}
+
+.wrapper .input-group {
+    width: 50%;
+    height: 10vh;
+}
+
+.wrapper h1 {
+    margin: 3%;
+    font-weight: 700;
+}
+
+.wrapper hr {
+    overflow: visible;
+    height: 5px;
+}
+
+.nav-item-1 .nav-link:hover {
+    border: 2px solid rgb(185, 88, 40);
+    color: rgb(185, 88, 40);
+    transition: all 0.3s;
+}
+
+.nav-item-1 {
+    margin-right: 5px;
+}
+
+.nav-item-1 .nav-link{
+    color: rgb(252,231,140);
+    text-align: center;
+    border: 2px solid rgb(252,231,140);
+    border-radius: 20px 20px 0 0;
+    height: 7vh;
+    width: 20vh;
+    margin: 2%;
+    font-size: 15px;
+    background-color: black;
+    border-collapse: collapse;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link{
+    font-weight: 400;
+}
+
+.navbar-nav{
+    max-width: 100%;
+}
+
+#navbarA .navbar-nav {
+    background-color: black;
+    padding-right: 3px;
+    border-radius: 20px 20px 0 0;
+}
+
+.btn-acc{
+    width: 40%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(252,231,140);
+    color: black;
+    height: 5vh;
+    margin: 5%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.btn-acc:hover {
+    color: rgb(185, 88, 40);
+    border: none;
+    background-color: rgb(252,231,140);
+    box-shadow: 0 0 0 9px black, 0 0 0 12px rgb(185, 88, 40);
+    transition: all 0.3s;
+}
+
+.person-pic {
+    display: flex;
+    float: right;
+}
+
+.bg-foto {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f18ca101483265.5f1ffff5aa41d.jpg);
+}
+
+
+@media only screen and (max-width: 900px) {
+    #navbarA .navbar-nav {
+        display: block;
+        border-top: 2px solid rgb(252,231,140);
+        border-right: 2px solid rgb(252,231,140);
+        border-left: 2px solid rgb(252,231,140);
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .nav-item-1 {
+        width: 100%;
+    }
+
+    .row {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-item-1 .nav-link {
+        min-width: 96%;
+        border-radius: 0;
+    }
+
+    .nav-link span svg {
+        width: 10%;
+    }
+
+    .nav-item-1 .nav-link:hover {
+        border: 2px solid rgb(185, 88, 40);
+        color: rgb(185, 88, 40);
+        transform: scale(1);
+    }
+
+    .person-pic {
+        display: flex;
+        float: none;
+        margin: 5%;
+        width: 90%;
+    }
+
+    .wrapper .input-group {
+        width: 100%;
+        height: 10vh;
+    }
+
+    .gender {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
