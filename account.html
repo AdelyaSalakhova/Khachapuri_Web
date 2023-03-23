@@ -49,17 +49,17 @@
                     <ul class="navbar-nav">
                         <li class="nav-item-1">
                             <a class="nav-link" href="account.html">
-                                <span><i class="fa-regular fa-user"></i>Профиль</span>
+                                <span><i class="fa-regular fa-user"></i>&nbsp;&nbsp;Профиль</span>
                             </a>
                         </li>
                         <li class="nav-item-1">
                             <a class="nav-link" href="favorite.html">
-                                <span><i class="fa-regular fa-star"></i>Избранное</span>
+                                <span><i class="fa-regular fa-star"></i>&nbsp;&nbsp;Избранное</span>
                             </a>
                         </li>
                         <li class="nav-item-1">
                             <a class="nav-link" href="myrecipe.html">
-                                <span><i class="fa-solid fa-pencil"></i>Мои рецепты</span>
+                                <span><i class="fa-solid fa-pencil"></i>&nbsp;&nbsp;Мои рецепты</span>
                             </a>
                         </li>
                     </ul>
@@ -71,54 +71,55 @@
 
                     <h1>Профиль</h1>
                     <hr>
-                    <div class="col-6 person-pic">
+                    <div class="col-5 person-pic">
                         <img src="img/person-pic.svg" alt="" style="object-fit: contain; max-width:100%;"/>
                     </div>
 
                     <div class="input-group">
-                        <input type="text" class="form-control col-6" placeholder="Имя пользователя"
-                               aria-label="Имя пользователя" aria-describedby="basic-addon1">
+                        <p style="width: 20%;">Имя:</p>
+                        <input disabled style = "width: 30%;" type="text" class="form-control" value = "Введенное при рег." aria-label="Имя пользователя" aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="E-mail пользователя"
-                               aria-label="E-mail пользователя" aria-describedby="basic-addon2">
+                        <p style="width: 20%;">E-mail:</p>
+                        <input disabled style = "width: 30%;" type="text" class="form-control" value = "Введенное при рег." aria-label="E-mail пользователя" aria-describedby="basic-addon2">
                     </div>
 
                     <div class="input-group">
-                        <input type="password" class="form-control" placeholder="Пароль" aria-label="Пароль"
-                               id="exampleInputPassword1" aria-describedby="basic-addon3">
+                        <p style="width: 20%;">Город:</p>
+                        <input disabled style = "width: 30%;" type="text" class="form-control" value = "Введенное при рег." aria-label="Город" aria-describedby="basic-addon4">
                     </div>
 
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Город" aria-label="Город"
-                               aria-describedby="basic-addon4">
+                        <p style="width: 20%;">Возраст:</p>
+                        <input disabled style = "width: 30%;" type="text" class="form-control" value = "Введенное при рег." aria-label="Возраст" aria-describedby="basic-addon5">
                     </div>
 
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Возраст" aria-label="Возраст"
-                               aria-describedby="basic-addon5">
+                        <p style="width: 20%;">Пароль:</p>
+                        <input disabled style = "width: 30%;" type="text" class="form-control" value = "Введенное при рег." aria-label="Пароль" aria-describedby="basic-addon6">
                     </div>
 
                     <div class="gender">
-                        <span class="input-group-text">Пол</span>
+                        <p style="width: 20%;">Пол:</p>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                   value="option1">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"value="option1">
                             <label class="form-check-label" for="inlineRadio1">Ж</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                   value="option2">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                             <label class="form-check-label" for="inlineRadio2">М</label></span>
                         </div>
                     </div>
 
                     <hr>
 
-                    <div class="row">
-                        <button type="submit" class="btn btn-primary btn-acc">Изменить</button>
-                        <button type="submit" class="btn btn-primary btn-acc">Сохранить</button>
+                    <div class="container-fluid">
+                        <button type="submit" id = "accChange" class="btn btn-primary btn-acc" style="margin: 20px 10% 30px 10%">Изменить</button>
+                        <div class = "row">
+                            <button type="submit" id = "accCancel" class="btn btn-primary btn-acc" style="width: 30%; margin: 20px 10% 30px 10%;">Отменить</button>
+                            <button type="submit" id = "accSave" class="btn btn-primary btn-acc" style="width: 30%; margin: 20px 10% 30px 10%;">Сохранить</button>
+                        </div>
                     </div>
 
                 </div>
@@ -128,9 +129,9 @@
 
 
     <footer class="text-center text-lg-start">
-        <div class="container p-4">
+        <div class="container py-4 px-1">
             <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="col mb-4 mb-md-0">
                     <h5 class="text-uppercase">Frontend</h5>
                     <hr>
                     <ul class="list-unstyled mb-0">
@@ -143,7 +144,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="col mb-4 mb-md-0">
                     <h5 class="text-uppercase mb-0">Backend</h5>
                     <hr>
 
@@ -154,7 +155,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="col mb-4 mb-md-0">
                     <h5 class="text-uppercase">Database</h5>
                     <hr>
                     <ul class="list-unstyled mb-0">
@@ -164,7 +165,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="col-2 mb-4 mb-md-0">
                     <h5 class="text-uppercase mb-0">Documentation</h5>
                     <hr>
                     <ul class="list-unstyled">
@@ -172,6 +173,9 @@
                             <a href="https://vk.com/crazy_lady_world">Трушина Юлия</a>
                         </li>
                     </ul>
+                </div>
+                <div class="col">
+                    <img src="/img/vine.svg" alt="" style="height: 150px">
                 </div>
             </div>
         </div>
@@ -182,6 +186,7 @@
     </footer>
 </div>
 
+<script src="/js/script.js"></script>
 
 </body>
 

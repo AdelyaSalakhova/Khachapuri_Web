@@ -126,9 +126,21 @@ body{
     max-height: 400px;
 }
 
+.card-body a {
+    color: rgb(185, 88, 40);
+}
 
-.dish-name {
+.card-body a:hover {
+    filter: brightness(120%);
+    transition: all .3s;
+}
+
+.dish-name, .user-name {
     font-weight: 500;
+}
+
+.user-age {
+    font-weight: 300;
 }
 
 .products-list {
@@ -204,13 +216,13 @@ body{
     width: 100%;
 }
 
-.btn-categories {
+.btn-categories, .btn-comment {
     color: black;
     background-color: rgb(252, 231, 140);
     border-color: black;
 }
 
-.btn-categories:hover, .btn-categories:focus-visible, .btn-categories:active {
+.btn-categories:hover, .btn-categories:focus-visible, .btn-categories:active, .btn-comment:hover, .btn-comment:focus-visible, .btn-comment:active {
     color: rgb(185, 88, 40);
     border-color: rgb(185, 88, 40);
     background-color: rgb(252, 231, 140);
@@ -280,6 +292,10 @@ footer a:hover {
     transition: all .3s;
 }
 
+footer img {
+    transform: rotate(30deg) scale(-1, 1);
+}
+
 .btn-acc .flare {
     position: absolute;
     top: 0;
@@ -306,6 +322,77 @@ footer a:hover {
 
 /* Adelya */
 
+.file1 .file2 {
+    padding: 1em;
+    margin: 7vh;
+}
+
+.file1 input[type=file] {
+    outline: 0;
+    opacity: 0;
+}
+
+.file1 .filelab {
+    width: 20%;
+    border: 2px dashed rgb(252, 231, 140);
+    border-radius: 5px;
+    display: block;
+    padding: 1.2em 1.2em 0 1.2em;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.file1 .filelab i {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+
+.file1 .filelab i,
+.file1 .filelab .putFile {
+    color: rgb(252, 231, 140);
+    transition: 200ms color;
+}
+
+.file1 .filelab:hover {
+    border: 2px dashed rgb(185, 88, 40)
+}
+
+.file1 .filelab:hover i,
+.file1 .filelab:hover .putFile {
+    color: rgb(185, 88, 40);
+}
+
+.card-text {
+    color: black;
+}
+
+.card-txt {
+    color: rgba(185, 88, 40, 0.6);
+    text-decoration: none;
+}
+
+.addrecipe {
+    width: 100%;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+    url('../img/Recipeback-svg-svg.svg');
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+
+.wrapper .input-group input{
+    border: none;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    font-size: 20pt;
+    color:rgb(185, 88, 40);
+}
+
 .wrapper {
     background-color: black;
     border-radius: 0 0 20px 20px;
@@ -314,29 +401,26 @@ footer a:hover {
     margin-bottom: 15%;
 }
 
-.wrapper .input-group input{
-    background-color: rgb(252,231,140);
-    border: none;
-    color:rgb(185, 88, 40);
-    height: 100%;
-    width: 100%;
+.wrapper .input-group p {
+    padding-top: 15px;
+}
+
+#accSave, #accCancel {
+    display: none;
+}
+
+.card-txt:hover {
+    color:rgba(185, 88, 40, 1);
 }
 
 .gender {
     display: flex;
     flex-direction: row;
-    width: 50%;
     height: 10vh;
-    padding-left: 5%;
+    width: 45%;
     padding-bottom: 2%;
     padding-right: 5%;
-}
-
-.gender .input-group-text {
-    background-color: rgb(252,231,140);
-    border: none;
-    padding-right: 5%;
-    padding-left: 5%;
+    margin-left: 5%;
 }
 
 .gender .form-check-input {
@@ -345,11 +429,20 @@ footer a:hover {
 
 .gender .form-check-input:checked {
     background-color: rgb(185, 88, 40);
-    border: none;
+    border: 0;
 }
 
-.wrapper .input-group input::placeholder {
-    color: black;
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    top: -6.85px;
+    left: 4px;
+    border-radius: 15px;
+    position: relative;
+    background-color: rgb(252,231,140);
+    content: '';
+    display: inline-block;
+    visibility: visible;
 }
 
 .wrapper .form-check{
@@ -364,11 +457,10 @@ footer a:hover {
 .input-group {
     padding-left: 5%;
     padding-bottom: 2%;
-    padding-right: 5%;
 }
 
 .wrapper .input-group {
-    width: 50%;
+    width: 45%;
     height: 10vh;
 }
 
@@ -385,7 +477,6 @@ footer a:hover {
 .nav-item-1 .nav-link:hover {
     border: 2px solid rgb(185, 88, 40);
     color: rgb(185, 88, 40);
-    transition: all 0.3s;
 }
 
 .nav-item-1 {
@@ -396,11 +487,11 @@ footer a:hover {
     color: rgb(252,231,140);
     text-align: center;
     border: 2px solid rgb(252,231,140);
+    border-bottom: 0px;
     border-radius: 20px 20px 0 0;
     height: 7vh;
-    width: 20vh;
-    margin: 2%;
-    font-size: 15px;
+    width: 24vh;
+    font-size: 23px;
     background-color: black;
     border-collapse: collapse;
     font-weight: bold;
@@ -415,21 +506,21 @@ footer a:hover {
 }
 
 #navbarA .navbar-nav {
-    background-color: black;
     padding-right: 3px;
     border-radius: 20px 20px 0 0;
 }
 
 .btn-acc{
-    width: 40%;
+    width: 50%;
     padding: 10px;
     border: none;
     background-color: rgb(252,231,140);
     color: black;
     height: 5vh;
-    margin: 5%;
+    margin: 15%;
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .btn-acc:hover {
@@ -443,6 +534,7 @@ footer a:hover {
 .person-pic {
     display: flex;
     float: right;
+    margin-right: 5%;
 }
 
 .bg-foto {
@@ -457,11 +549,8 @@ footer a:hover {
 @media only screen and (max-width: 900px) {
     #navbarA .navbar-nav {
         display: block;
-        border-top: 2px solid rgb(252,231,140);
-        border-right: 2px solid rgb(252,231,140);
-        border-left: 2px solid rgb(252,231,140);
         width: 100%;
-        border-radius: 20px 20px 0 0;
+        padding: 0;
     }
 
     .nav-item-1 {
@@ -474,7 +563,8 @@ footer a:hover {
     }
 
     .nav-item-1 .nav-link {
-        min-width: 96%;
+        margin: 0;
+        min-width: 100%;
         border-radius: 0;
     }
 
