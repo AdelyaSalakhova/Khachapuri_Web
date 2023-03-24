@@ -1,4 +1,6 @@
 let val = []
+let x = 1
+let y = 1
 
 document.addEventListener('click', e => {
     const element = document.getElementById('accChange')
@@ -10,7 +12,21 @@ document.addEventListener('click', e => {
     const element2 = document.getElementById('accCancel')
     const element2E = e.composedPath().includes(element2)
 
+    const element3 = document.getElementById('addRecipe')
+    const element3E = e.composedPath().includes(element3)
+
+    const element4 = document.getElementById('addRecipe1')
+
     const ChangeInp = document.querySelectorAll('.wrapper .input-group input');
+
+
+    if (element3E) {
+        console.log('1')
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(element4)
+        toastBootstrap.show()
+
+
+    }
 
     for (let i = 0; i < ChangeInp.length; i++) { // выведет 0, затем 1, затем 2
         val.push(ChangeInp[i].value)
@@ -49,8 +65,99 @@ document.addEventListener('click', e => {
         for (let j = 0; j < ChangeInp.length; j++) { // выведет 0, затем 1, затем 2
             ChangeInp[j].value=val[j]
         }
+
+        document.getElementById('accChange').style.display = "inline"
+        document.getElementById('accSave').style.display = "none"
+        document.getElementById('accCancel').style.display = "none"
     }
 })
+
+let steps = []
+let products = []
+
+function addInput() {
+    if (x < 10) {
+        let str = '<div class="input-group" style="width: 100%;"><p style="width: 20%; padding-top: 5px;">Продукт:</p><input id ="product'+(x+1)+'" style="width: 40%; border-radius: .375rem; height: 5vh;"  type="text" class="form-control"><p style="width: 20%; padding-top: 5px;">Количество:</p><input id ="product'+(x+1)+'quantity" style="width: 20%; border-radius: .375rem; height: 5vh;"  type="text" class="form-control"></div><div id="input' + (x + 1) + '"></div>'
+        document.getElementById('input' + x).innerHTML = str;
+        products.push(document.getElementById('input' + x))
+        x++;
+    }
+    else {
+        alert('Нельзя добавить больше ингридиентов!');
+    }
+}
+
+function removeInput() {
+    if (products.length > 0) {
+        let poped = products.length
+        products.pop()
+        x = x - 1
+        document.getElementById('input' + poped).innerHTML = "";
+    }
+}
+
+function addInputSteps() {
+    if (y < 15) {
+        let str = '<div class="row" style="border: 2px solid rgb(252,231,140); border-radius: 50px; padding: 10px 0 30px 0; margin-bottom: 50px;">'+
+            '<h3>Шаг'+(y+1)+'</h3>'+
+            '<hr>'+
+            '<div class="file2 col-5" style="padding: 5px 0 0 0;">'+
+            '<p style="width: 20%; margin: 0 0 15px 70px;">Фото:</p>'+
+            '<div class="input__wrapper">'+
+            '<input name="file" id="input__file'+(y+1)+'" type="file" class="input input__file" multiple>'+
+            '<label for="input__file" class="input__file-button">'+
+            '<p class="input__file-icon-wrapper"><i class="fa-solid fa-paperclip"></i></p>'+
+            '<p class="input__file-button-text">Выберите файл</p>'+
+            '</label>'+
+            '</div>'+
+            '</div>'+
+            '<div class="col-7">'+
+            '<p style="width: 20%; padding-top: 5px;">Описание:</p>'+
+            '<div class="textarea">'+
+            '<div class="scrolling">'+
+            '<div class="text" id = "stepDesc'+(y+1)+'" contenteditable="true"></div>'+
+            '</div>'+
+            '</div>'+
+            '</div>'+
+            '</div><div id="inputSteps'+(y+1)+'" class="container"></div>'
+
+
+
+        document.getElementById('inputSteps' + y).innerHTML = str;
+        steps.push(document.getElementById('inputSteps' + y))
+        y++;
+    }
+    else {
+        alert('Нельзя добавить больше шагов!');
+    }
+}
+
+function removeInputSteps() {
+    if (steps.length > 0) {
+        let poped = steps.length
+        steps.pop()
+        y = y - 1
+        document.getElementById('inputSteps' + poped).innerHTML = "";
+    }
+}
+
+
+let inputs = document.querySelectorAll('.input__file');
+Array.prototype.forEach.call(inputs, function (input) {
+    let label = input.nextElementSibling,
+        labelVal = label.querySelector('.input__file-button-text').innerText;
+
+    input.addEventListener('change', function (e) {
+        let countFiles = '';
+        if (this.files && this.files.length >= 1)
+            countFiles = this.files.length;
+
+        if (countFiles)
+            label.querySelector('.input__file-button-text').innerText = 'Выбрано файлов: ' + countFiles;
+        else
+            label.querySelector('.input__file-button-text').innerText = labelVal;
+    });
+});
 
 
 function registration() {

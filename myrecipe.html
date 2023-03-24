@@ -69,65 +69,163 @@
 
             <div class="row">
                 <div class="wrapper" style="border: 2px solid rgb(252,231,140);">
+                    <form>
 
-                    <h1>Мои рецепты</h1>
-                    <hr>
-                    <div class="innerwrapper">
+                        <h1>Мои рецепты</h1>
+                        <hr>
+                        <div class="design1"
+                             style="height: 2%; background-color: rgb(252,231,140); opacity: 0.5; border-radius: 20px;">
+                        </div>
+                        <div class="innerwrapper">
+                            <hr>
+                            <h2>Общая информация</h2>
+                            <hr>
 
-                        <div class="file1">
-                            <div class="file2">
-                                <label class="filelab">
-                                    <i class="fa-solid fa-paperclip"></i>
-                                    <span class="putFile">Добавить файл</span>
-                                    <input type="file" style="height: 10px;">
-                                </label>
+
+                            <div class="row">
+
+                                <div class="col-5 file2">
+                                    <div class="input__wrapper">
+                                        <input name="file" type="file" id="input__file" class="input input__file" required multiple>
+                                        <label for="input__file" class="input__file-button">
+                                            <p class="input__file-icon-wrapper"><i class="fa-solid fa-paperclip"></i></p>
+                                            <p class="input__file-button-text">Выберите файл</p>
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-7" style="padding-top: 2em; text-align: left;">
+                                    <div class="input-group" style="width: 85%;">
+                                        <p style="width: 45%; padding-top: 10px;">Название:</p>
+                                        <input  required style="width: 55%; height: 5vh; border-radius: .375rem;" id ="recipeName" type="text" class="form-control">
+                                    </div>
+
+                                    <div class="input-group" style="width: 85%;">
+                                        <p style="width: 45%; padding-top: 5px;">Калорийность:</p>
+                                        <input  required style="width: 25%; height: 5vh; border-radius: .375rem;" type="text" class="form-control" id ="recipeCalories">
+                                        <p style="width: 30%; padding-top: 5px;">&nbsp;ккал на 100 гр.</p>
+                                    </div>
+
+                                    <div class="input-group" style="width: 85%;">
+                                        <p style="width: 45%; padding-top: 5px;">Время приготовления:</p>
+                                        <input  required style="width: 45%; height: 5vh; border-radius: .375rem;" type="text" class="form-control" id ="recipeTime">
+                                        <p style="width: 10%; padding-top: 5px;">&nbsp;мин</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group" style="width: 100%; text-align: left; height: 200px;" >
+                                <p style="width: 10%;  margin-left: 5%;">Описание:</p>
+                                <div class="textarea" style="width: 60%;">
+                                    <div class="scrolling">
+                                        <div class="text" id ="recipeDescription" contenteditable="true"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group" style="width: 100%; text-align: left; height: 200px;">
+                                <p style="width: 10%; margin-left: 5%;">История:</p>
+                                <div class="textarea" style="width: 60%;">
+                                    <div class="scrolling">
+                                        <div class="text" id ="recipeHistory" contenteditable="true"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <h2>Список продуктов</h2>
+                            <hr>
+
+                            <div class="container col-9" style="padding-top: 2em;">
+                                <div id="input0">
+                                    <div class="input-group" style="width: 100%;">
+                                        <p style="width: 20%; padding-top: 5px;">Продукт:</p>
+                                        <input  required id="product1" style="width: 40%; height: 5vh; border-radius: .375rem;" type="text"
+                                                class="form-control">
+                                        <p style="width: 20%; padding-top: 5px;">Количество:</p>
+                                        <input  required id="product1quantity" style="width: 20%; height: 5vh; border-radius: .375rem;" type="text"
+                                                class="form-control">
+                                    </div>
+                                </div>
+                                <div id="input1"></div>
+                            </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="addrem" onclick="addInput()">+</div>
+                                        <div class="addrem" onclick="removeInput()">-</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <h2>Шаги</h2>
+                            <hr>
+
+
+                            <div class="container col-9" style="padding-top: 2em;">
+                                <div id="inputSteps0" class="container">
+                                    <div class="row" style="border: 2px solid rgb(252,231,140); border-radius: 50px; padding: 10px 0px 30px 0px; margin-bottom: 50px;">
+                                        <h3>Шаг 1</h3>
+                                        <hr>
+                                        <div class="file2 col-5" style="padding: 5px 0px 0px 0px;">
+                                            <p style="width: 20%; margin: 0px 0px 15px 70px;">Фото:</p>
+                                            <div class="input__wrapper" style="margin-left: 5%; margin-bottom: 0;">
+                                                <input  required name="file" type="file" id="input__file0" class="input input__file" multiple>
+                                                <label for="input__file0" class="input__file-button">
+                                                    <p class="input__file-icon-wrapper"><i class="fa-solid fa-paperclip"></i></p>
+                                                    <p class="input__file-button-text">Выберите файл</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <p style="width: 20%; padding-top: 5px;">Описание:</p>
+                                            <div class="textarea">
+                                                <div class="scrolling">
+                                                    <div class="text" id = "stepDesc0" contenteditable="true"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="inputSteps1" class="container"></div>
+                            </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="addrem" onclick="addInputSteps()">+</div>
+                                        <div class="addrem" onclick="removeInputSteps()">-</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <hr>
+                        <div class="addrecipe">
+                            <button type="submit" style="width: 30%; font-size: 15pt;" id ="addRecipe" class="btn btn-primary btn-acc">Добавить рецепт<span class="flare"></span></button>
+                        </div>
+
+                        <div class="toast-container position-fixed position-fixed bottom-0 end-0 p-3">
+                            <div id="addRecipe1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header">
+                                    <strong class="me-auto">Khach&puri</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                                <div class="toast-body" style="color: black;">
+                                    Рецепт отправлен на проверку!
+                                </div>
                             </div>
                         </div>
-
-                        <div class="input-group">
-                            <p style="width: 20%;">Имя:</p>
-                            <input disabled style="width: 30%;" id="userName" type="text" class="form-control"
-                                   value="Введенное при рег." aria-label="Имя пользователя"
-                                   aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="input-group">
-                            <p style="width: 20%;">E-mail:</p>
-                            <input disabled style="width: 30%;" id="E-mail" type="text" class="form-control"
-                                   value="Введенное при рег." aria-label="E-mail пользователя"
-                                   aria-describedby="basic-addon2">
-                        </div>
-
-                        <div class="input-group">
-                            <p style="width: 20%;">Город:</p>
-                            <input disabled style="width: 30%;" id="City" type="text" class="form-control"
-                                   value="Введенное при рег." aria-label="Город" aria-describedby="basic-addon4">
-                        </div>
-
-                        <div class="input-group">
-                            <p style="width: 20%;">Возраст:</p>
-                            <input disabled style="width: 30%;" id="Age" type="text" class="form-control"
-                                   value="Введенное при рег." aria-label="Возраст" aria-describedby="basic-addon5">
-                        </div>
-
-                        <div class="input-group">
-                            <p style="width: 20%;">Пароль:</p>
-                            <input disabled style="width: 30%;" id="password" type="text" class="form-control"
-                                   value="Введенное при рег." aria-label="Пароль" aria-describedby="basic-addon6">
-                        </div>
-
-                    </div>
-
-                    <hr>
-                    <div class="addrecipe"><button type="submit" style="width: 30%; font-size: 15pt;"
-                                                   class="btn btn-primary btn-acc">Добавить рецепт<span class="flare"></span></button>
-                    </div>
-                    <hr>
+                        <hr>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
 
     <footer class="text-center text-lg-start">
         <div class="container py-4 px-1">
@@ -186,6 +284,8 @@
         </div>
     </footer>
 </div>
+
+<script src="/js/script.js"></script>
 </body>
 
 </html>
