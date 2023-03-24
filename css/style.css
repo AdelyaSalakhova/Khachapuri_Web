@@ -74,7 +74,47 @@ body{
     font-size: 28pt;
 }
 
-/* Header */
+.reg {
+    font-size: 14pt;
+    text-decoration: none;
+    cursor: pointer;
+}
+.reg::after {
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: rgb(185, 88, 40);
+    height: 1px;
+    transition: all 0.3s;
+    transform: scale(0);
+}
+
+.reg:hover::after {
+    transform: scale(1);
+
+}
+
+.btn-close {
+    --bs-btn-close-color: #000;
+    --bs-btn-close-opacity: 0.8;
+    --bs-btn-close-hover-opacity: 0.75;
+    /* --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); */
+    --bs-btn-close-focus-opacity: 0.5;
+    --bs-btn-close-white-filter: invert(1) grayscale(200%) brightness(200%);
+}
+
+.modal-content label {
+    font-size: 16pt;
+    font-weight: 500;
+}
+
+.modal-content .form-check .form-check-input {
+    float: none;
+    margin-left: 0;
+    font-size: 25pt;
+    margin-top: 12px;
+}
+ /* Header */
 
 /*Body*/
 .info-block {
@@ -216,13 +256,15 @@ body{
     width: 100%;
 }
 
-.btn-categories, .btn-comment {
+.btn-categories, .btn-comment, .btn-log-in {
     color: black;
     background-color: rgb(252, 231, 140);
     border-color: black;
 }
 
-.btn-categories:hover, .btn-categories:focus-visible, .btn-categories:active, .btn-comment:hover, .btn-comment:focus-visible, .btn-comment:active {
+.btn-categories:hover, .btn-categories:focus-visible, .btn-categories:active,
+.btn-comment:hover, .btn-comment:focus-visible, .btn-comment:active,
+.btn-log-in:hover, .btn-log-in:focus-visible, .btn-log-in:active{
     color: rgb(185, 88, 40);
     border-color: rgb(185, 88, 40);
     background-color: rgb(252, 231, 140);
@@ -322,18 +364,19 @@ footer img {
 
 /* Adelya */
 
-.file1 .file2 {
-    padding: 1em;
-    margin: 7vh;
+.file2 {
+    padding: 2em;
 }
 
-.file1 input[type=file] {
+.file2 input[type=file] {
     outline: 0;
     opacity: 0;
 }
 
-.file1 .filelab {
-    width: 20%;
+.filelab {
+    width: 50%;
+    height: 24vh;
+    margin-left: 20%;
     border: 2px dashed rgb(252, 231, 140);
     border-radius: 5px;
     display: block;
@@ -341,26 +384,26 @@ footer img {
     transition: border 300ms ease;
     cursor: pointer;
     text-align: center;
+    font-size: 20pt;
 }
 
-.file1 .filelab i {
+.filelab i {
     display: block;
     margin-bottom: 10px;
-    font-size: 42px;
 }
 
-.file1 .filelab i,
-.file1 .filelab .putFile {
+.filelab i,
+.filelab .putFile {
     color: rgb(252, 231, 140);
     transition: 200ms color;
 }
 
-.file1 .filelab:hover {
+.filelab:hover {
     border: 2px dashed rgb(185, 88, 40)
 }
 
-.file1 .filelab:hover i,
-.file1 .filelab:hover .putFile {
+.filelab:hover i,
+.filelab:hover .putFile {
     color: rgb(185, 88, 40);
 }
 
@@ -384,6 +427,12 @@ footer img {
     height: 40vh;
 }
 
+textarea {
+    resize: none;
+    background-color: #fce78c;
+    color: rgb(185, 88, 40);
+}
+
 .wrapper .input-group input{
     border: none;
     background-color: black;
@@ -399,10 +448,20 @@ footer img {
     text-align: center;
     color: #fce78c;
     margin-bottom: 15%;
+    padding-bottom: 5%;
 }
 
 .wrapper .input-group p {
     padding-top: 15px;
+}
+
+.innerwrapper .input-group {
+    padding-left: 0;
+}
+
+.innerwrapper .input-group input {
+    background-color: rgb(252, 231, 140);
+    border: 0;
 }
 
 #accSave, #accCancel {
@@ -430,19 +489,6 @@ footer img {
 .gender .form-check-input:checked {
     background-color: rgb(185, 88, 40);
     border: 0;
-}
-
-input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    top: -6.85px;
-    left: 4px;
-    border-radius: 15px;
-    position: relative;
-    background-color: rgb(252,231,140);
-    content: '';
-    display: inline-block;
-    visibility: visible;
 }
 
 .wrapper .form-check{
