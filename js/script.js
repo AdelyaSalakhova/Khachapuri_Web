@@ -74,8 +74,8 @@ function registration() {
     '                                           <input type="number" class="form-control" id="exampleFormControlInput3">\n' +
     '                                       </div>\n' +
     '                                       <div class="mb-1">\n' +
-    '                                           <label for="exampleFormControlInput3" class="form-label mb-0">Ваш город</label>\n' +
-    '                                           <input type="text" class="form-control" id="exampleFormControlInput3">\n' +
+    '                                           <label for="exampleFormControlInput4" class="form-label mb-0">Ваш город</label>\n' +
+    '                                           <input type="text" class="form-control" id="exampleFormControlInput4">\n' +
     '                                       </div>\n' +
     '                                       <div class="mb-1">\n' +
     '                                           <label>Ваш пол*</label>\n' +
@@ -139,3 +139,15 @@ function login() {
         '                                    </div>\n' +
         '                                </form>'
 };
+
+function scrolling(clicked) {
+    window.scrollTo(0, 2000);
+    document.querySelector('.active').classList.remove('active')
+    clicked.classList.add('active')
+}
+
+function scrolling_fav(clicked) {
+    window.scrollTo(0, 400);
+    document.querySelector('.active').classList.remove('active')
+    clicked.classList.add('active')
+}
