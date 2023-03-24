@@ -62,11 +62,11 @@ function registration() {
     '                                <form>\n' +
     '                                   <div class="modal-body modal-inputs">\n' +
     '                                       <div class="mb-1">\n' +
-    '                                           <label for="exampleFormControlInput1" class="form-label mb-0">Ваш Email</label>\n' +
+    '                                           <label for="exampleFormControlInput1" class="form-label mb-0">Ваш Email*</label>\n' +
     '                                           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>\n' +
     '                                       </div>\n' +
     '                                       <div class="mb-1">\n' +
-    '                                           <label for="exampleFormControlInput2" class="form-label mb-0">Ваше имя</label>\n' +
+    '                                           <label for="exampleFormControlInput2" class="form-label mb-0">Ваше имя*</label>\n' +
     '                                           <input type="text" class="form-control" id="exampleFormControlInput2" required>\n' +
     '                                       </div>\n' +
     '                                       <div class="mb-1">\n' +
@@ -78,7 +78,7 @@ function registration() {
     '                                           <input type="text" class="form-control" id="exampleFormControlInput3">\n' +
     '                                       </div>\n' +
     '                                       <div class="mb-1">\n' +
-    '                                           <label>Пол</label>\n' +
+    '                                           <label>Ваш пол*</label>\n' +
     '                                           <div class="row">\n' +
     '                                               <div class="col form-check">\n' +
     '                                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">\n' +
@@ -95,13 +95,13 @@ function registration() {
     '                                           </div>\n' +
     '                                       </div>\n' +
     '                                       <div class="mb-1">\n' +
-    '                                           <label for="inputPassword1" class=" col-form-label mb-0">Пароль</label>\n' +
+    '                                           <label for="inputPassword1" class=" col-form-label mb-0">Пароль*</label>\n' +
     '                                           <div class="password">\n' +
     '                                               <input type="password" class="form-control" id="inputPassword1" required>\n' +
     '                                           </div>\n' +
     '                                       </div>\n' +
     '                                       <div class="mb-1">\n' +
-    '                                           <label for="inputPassword2" class=" col-form-label mb-0">Повторите пароль</label>\n' +
+    '                                           <label for="inputPassword2" class=" col-form-label mb-0">Повторите пароль*</label>\n' +
     '                                           <div class="password">\n' +
     '                                               <input type="password" class="form-control" id="inputPassword2" required>\n' +
     '                                           </div>\n' +
