@@ -78,8 +78,15 @@ document.addEventListener('click', e => {
     }
 
     else if (element2E) {
+
+
         for (let j = 0; j < ChangeInp.length; j++) { // выведет 0, затем 1, затем 2
             ChangeInp[j].value = val[j]
+        }
+
+        for (let i = 0; i < ChangeInp.length; i++) { // выведет 0, затем 1, затем 2
+            ChangeInp[i].setAttribute("disabled", "true");
+            ChangeInp[i].style.backgroundColor = "black"
         }
 
         document.getElementById('accChange').style.display = "inline"
