@@ -368,6 +368,16 @@ footer img {
 
 /* Adelya */
 
+.alerts1, .alerts {
+    display: none;
+    width: 20%;
+    font-size: 8pt;
+    margin-left: 11%;
+    margin-top: -4%;
+    height: 50px;
+    color: red;
+}
+
 .input__wrapper {
     width: 100%;
     position: relative;
@@ -412,45 +422,6 @@ footer img {
     padding: 2em;
 }
 
-.file2 input[type=file] {
-    outline: 0;
-    opacity: 0;
-}
-
-.filelab {
-    width: 50%;
-    height: 24vh;
-    margin-left: 20%;
-    border: 2px dashed rgb(252, 231, 140);
-    border-radius: 5px;
-    display: block;
-    padding: 1.2em 1.2em 0 1.2em;
-    transition: border 300ms ease;
-    cursor: pointer;
-    text-align: center;
-    font-size: 20pt;
-}
-
-.filelab i {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.filelab i,
-.filelab .putFile {
-    color: rgb(252, 231, 140);
-    transition: 200ms color;
-    width: 100%;
-}
-
-.filelab:hover {
-    border: 2px dashed rgb(185, 88, 40)
-}
-
-.filelab:hover i,
-.filelab:hover .putFile {
-    color: rgb(185, 88, 40);
-}
 
 .card-text {
     color: black;
