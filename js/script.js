@@ -17,8 +17,6 @@ document.addEventListener('click', e => {
     const element3 = document.getElementById('addRecipe')
     const element3E = e.composedPath().includes(element3)
 
-    const element4 = document.getElementById('addRecipe1')
-
     const ChangeInp = document.querySelectorAll('.wrapper .input-group input');
 
     if (element3E) {
@@ -95,7 +93,7 @@ let products = []
 
 function addInput() {
     if (x < 10) {
-        var str = '<div class="input-group" style="width: 100%;"><p style="width: 20%; padding-top: 5px;">Продукт:</p><input id ="product' + (x + 1) + '" style="width: 40%; border-radius: .375rem; height: 5vh;"  type="text" class="form-control"><p style="width: 20%; padding-top: 5px;">Количество:</p><input id ="product' + (x + 1) + 'quantity" style="width: 20%; border-radius: .375rem; height: 5vh;"  type="text" class="form-control"></div><div id="input' + (x + 1) + '"></div>'
+        let str = '<div class="input-group" style="width: 100%;"><p style="width: 20%; padding-top: 5px;">Продукт:</p><input id ="product' + (x + 1) + '" style="width: 40%; border-radius: .375rem; height: 5vh;"  type="text" class="form-control"><p style="width: 20%; padding-top: 5px;">Количество:</p><input id ="product' + (x + 1) + 'quantity" style="width: 20%; border-radius: .375rem; height: 5vh;"  type="text" class="form-control"></div><div id="input' + (x + 1) + '"></div>'
         document.getElementById('input' + x).innerHTML = str;
         products.push(document.getElementById('input' + x))
         x++;
@@ -116,13 +114,13 @@ function removeInput() {
 
 function addInputSteps() {
     if (y < 15) {
-        var str = '<div class="row" style="border: 2px solid rgb(252,231,140); border-radius: 50px; padding: 10px 0px 30px 0px; margin-bottom: 50px;">' +
+        let str = '<div class="row" style="border: 2px solid rgb(252,231,140); border-radius: 50px; padding: 10px 0 30px 0; margin-bottom: 50px;">' +
             '<h3>Шаг ' + (y + 1) + '</h3>' +
             '<hr>' +
-            '<div class="file2 col-5" style="padding: 5px 0px 0px 0px;">' +
-            '<p style="width: 20%; margin: 0px 0px 15px 70px;">Фото:</p>' +
+            '<div class="file2 col-5" style="padding: 5px 0 0 0;">' +
+            '<p style="width: 20%; margin: 0 0 15px 70px;">Фото:</p>' +
             '<div class="input__wrapper" style="margin-left: 5%; margin-bottom: 0;">' +
-            '<input name="file" id="input__file' + (y + 1) + '" type="file"class="input input__file">' +
+            '<input name="file" id="input__file' + (y + 1) + '" type="file" class="input input__file">' +
             '<label for="input__file" class="input__file-button">' +
             '<p class="input__file-icon-wrapper"><i class="fa-solid fa-paperclip"></i></p>' +
             '<p class="input__file-button-text">Выберите файл</p>' +
