@@ -5,6 +5,23 @@ let inputs = document.querySelectorAll('.input__file');
 let countFiles1 = 0;
 
 document.addEventListener('click', e => {
+    
+    Array.prototype.forEach.call(inputs, function (input) {
+        let label = input.nextElementSibling,
+            labelVal = label.querySelector('.input__file-button-text').innerText;
+    
+        input.addEventListener('change', function (e) {
+            let countFiles = '';
+            if (this.files && this.files.length >= 1)
+                countFiles = this.files.length;
+    
+            if (countFiles)
+                label.querySelector('.input__file-button-text').innerText = 'Выбрано файлов: ' + countFiles;
+            else
+                label.querySelector('.input__file-button-text').innerText = labelVal;
+        });
+    });
+    
     const element = document.getElementById('accChange')
     const elementE = e.composedPath().includes(element)
 
@@ -121,14 +138,14 @@ function removeInput() {
 
 function addInputSteps() {
     if (y < 15) {
-        let str = '<div class="row" style="border: 2px solid rgb(252,231,140); border-radius: 50px; padding: 10px 0 30px 0; margin-bottom: 50px;">' +
+        var str = '<div class="row" style="border: 2px solid rgb(252,231,140); border-radius: 50px; padding: 10px 0px 30px 0px; margin-bottom: 50px;">' +
             '<h3>Шаг ' + (y + 1) + '</h3>' +
             '<hr>' +
-            '<div class="file2 col-5" style="padding: 5px 0 0 0;">' +
-            '<p style="width: 20%; margin: 0 0 15px 70px;">Фото:</p>' +
+            '<div class="file2 col-5" style="padding: 5px 0px 0px 0px;">' +
+            '<p style="width: 20%; margin: 0px 0px 15px 70px;">Фото:</p>' +
             '<div class="input__wrapper" style="margin-left: 5%; margin-bottom: 0;">' +
-            '<input name="file" id="input__file' + (y + 1) + '" type="file" class="input input__file">' +
-            '<label for="input__file" class="input__file-button">' +
+            '<input name="file" id="input__file'+(y + 1) +'" type="file" class="input input__file">' +
+            '<label for="input__file'+(y+1)+'" class="input__file-button">' +
             '<p class="input__file-icon-wrapper"><i class="fa-solid fa-paperclip"></i></p>' +
             '<p class="input__file-button-text">Выберите файл</p>' +
             '</label>' +
@@ -142,13 +159,14 @@ function addInputSteps() {
             '</div>' +
             '</div>' +
             '</div>' +
-            '</div><div id="inputSteps' + (y + 1) + '" class="container"></div>'
+            '</div><div id="inputSteps'+(y + 1) +'" class="container"></div>'
 
 
 
         document.getElementById('inputSteps' + y).innerHTML = str;
         steps.push(document.getElementById('inputSteps' + y))
         y++;
+        inputs = document.querySelectorAll('.input__file');
     }
     else {
         alert('Нельзя добавить больше шагов!');
