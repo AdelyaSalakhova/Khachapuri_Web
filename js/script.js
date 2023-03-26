@@ -282,3 +282,40 @@ function scrolling_fav(clicked) {
     document.querySelector('.active').classList.remove('active')
     clicked.classList.add('active')
 }
+
+function favor() {
+    document.querySelector('.favorite').innerHTML = '<i onclick="unfavor()" class="fa-solid fa-heart fav"></i>'
+}
+
+function unfavor() {
+    document.querySelector('.favorite').innerHTML = '<i onclick="favor()" class="fa-regular fa-heart non-fav"></i>'
+}
+
+function proportion_pm(clicked) {
+    let proportions = parseFloat(document.querySelector('.proportion').textContent)
+    const product_amount_start = []
+    document.querySelectorAll('.product-amount').forEach(item => {
+        product_amount_start.push(parseFloat(item.textContent) / proportions)
+    })
+    if (clicked.classList.contains('fa-minus') && proportions > 1) {
+        proportions -= 1
+        document.querySelector('.proportion').textContent = proportions
+        let product_amount_new = product_amount_start.map(num => num * proportions)
+        for (let i = 0; i < product_amount_new.length; i++) {
+            if (!isNaN(product_amount_new[i])) {
+                document.querySelectorAll('.product-amount')[i].textContent = String(product_amount_new[i])
+            }
+        }
+    }
+    else if (clicked.classList.contains('fa-plus') && proportions < 10 ) {
+        proportions += 1
+        document.querySelector('.proportion').textContent = proportions
+        let product_amount_new = product_amount_start.map(num => num * proportions)
+        for (let i = 0; i < product_amount_new.length; i++) {
+            if (!isNaN(product_amount_new[i])) {
+                document.querySelectorAll('.product-amount')[i].textContent = String(product_amount_new[i])
+            }
+        }
+    }
+}
+

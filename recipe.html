@@ -20,6 +20,8 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/a85428af7b.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
 <div class="full_header">
     <nav class="navbar navbar-expand container-fluid" id="navbarSupportedContent">
         <ul class="navbar-nav top-menu justify-content-start">
@@ -70,7 +72,12 @@
         <div class="col-lg-6 col-sm-12">
             <div>
                 <div class="d-flex justify-content-between">
-                    <span class="dish-name">Название</span>
+                    <span class="dish-name">
+                        Название&nbsp;
+                        <span class="favorite">
+                            <i onclick="favor()" class="fa-regular fa-heart non-fav"></i>
+                        </span>
+                    </span>
                     <span>Рейтинг - <span class='rating'>5.0</span> <i class="fa-solid fa-star" style="color: #ffcf48;"></i></span>
                 </div>
                 <hr>
@@ -82,37 +89,66 @@
                      <ul>
                          <li>
                              <span class="product">Куриное филе</span>
-                             <span class="product-amount">700 гр.</span>
+                             <div>
+                                 <span class="product-amount">700</span> <span class="product-metric">гр.</span>
+                             </div>
                          </li>
                          <li>
                              <span class="product">Картофель</span>
-                             <span class="product-amount">300 гр.</span>
+                             <div>
+                                 <span class="product-amount">300</span> <span class="product-metric">гр.</span>
+                             </div>
                          </li>
                          <li>
                              <span class="product">Лук репчатый</span>
-                             <span class="product-amount">2 ср. шт.</span>
+                             <div>
+                                 <span class="product-amount">2</span> <span class="product-metric">ср. шт.</span></span>
+                             </div>
                          </li>
                          <li>
-                             <span class="product">Соль, перец</span>
-                             <span class="product-amount">По вкусу</span>
+                             <span class="product"><span class="product-metric">Соль, перец</span></span>
+                             <div>
+                                 <span class="product-amount"></span><span class="product-metric">По вкусу</span>
+
+                             </div>
                          </li>
                          <li>
                              <span class="product">Вода</span>
-                             <span class="product-amount">0.5 л</span>
+                             <div>
+                                 <span class="product-amount">0.5</span><span class="product-metric"> л</span>
+                             </div>
                          </li>
                          <li>
                              <span class="product">Тест</span>
-                             <span class="product-amount">0.5 л</span>
+                             <div>
+                                 <span class="product-amount">0.5</span><span class="product-metric"> л</span>
+                             </div>
                          </li>
                          <li>
                              <span class="product">Тест</span>
-                             <span class="product-amount">0.5 л</span>
+                             <div>
+                                 <span class="product-amount">0.5</span><span class="product-metric"> л</span>
+                             </div>
                          </li>
                      </ul>
                 </div>
-                <div class="extra-info">
-                    <div>Время приготовления - <span class="time">60 мин.</span></div>
-                    <div>Калорийность - <span class="calories">999</span> ккал. на 100гр.</div>
+                <div class="row d-flex justify-content-between">
+                    <div class="extra-info">
+                        <div style="font-weight: 500; font-size: 16pt;">
+                            <span>Калькулятор пропорций: </span>
+                            <span>
+                                <button style="background-color: #fff; border: none">
+                                    <i onclick="proportion_pm(this)" class="fa-solid fa-minus"></i>
+                                </button>
+                                <span class="proportion"> 1 </span>
+                                <button style="background-color: #fff; border: none">
+                                    <i onclick="proportion_pm(this)" class="fa-solid fa-plus"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <div>Время приготовления: <span class="time">60 мин.</span></div>
+                        <div>Калорийность: <span class="calories">999</span> ккал. на 100гр.</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -217,7 +253,6 @@
                         </div>
                     </div>
                 </div>
-                </select>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Текст отзыва"></textarea>
                 <div class="col-auto">
                     <button type="submit" class="btn btn-primary btn-comment mt-1 mb-2">Отправить</button>
