@@ -299,23 +299,16 @@ function proportion_pm(clicked) {
     })
     if (clicked.classList.contains('fa-minus') && proportions > 1) {
         proportions -= 1
-        document.querySelector('.proportion').textContent = proportions
-        let product_amount_new = product_amount_start.map(num => num * proportions)
-        for (let i = 0; i < product_amount_new.length; i++) {
-            if (!isNaN(product_amount_new[i])) {
-                document.querySelectorAll('.product-amount')[i].textContent = String(product_amount_new[i])
-            }
-        }
     }
     else if (clicked.classList.contains('fa-plus') && proportions < 10 ) {
         proportions += 1
-        document.querySelector('.proportion').textContent = proportions
-        let product_amount_new = product_amount_start.map(num => num * proportions)
-        for (let i = 0; i < product_amount_new.length; i++) {
-            if (!isNaN(product_amount_new[i])) {
-                document.querySelectorAll('.product-amount')[i].textContent = String(product_amount_new[i])
-            }
-        }
     }
+    document.querySelector('.proportion').textContent = proportions
+    let product_amount_new = product_amount_start.map(num => num * proportions)
+    for (let i = 0; i < product_amount_new.length; i++) {
+        if (!isNaN(product_amount_new[i])) {
+            document.querySelectorAll('.product-amount')[i].textContent = String(product_amount_new[i])
+        }
+    }ы
 }
 
