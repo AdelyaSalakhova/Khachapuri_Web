@@ -309,6 +309,6 @@ function proportion_pm(clicked) {
         if (!isNaN(product_amount_new[i])) {
             document.querySelectorAll('.product-amount')[i].textContent = String(product_amount_new[i])
         }
-    }ы
+    }
 }
 
