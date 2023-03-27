@@ -200,6 +200,11 @@ body{
     transition: all .3s;
 }
 
+.cn {
+    font-weight: 300;
+    font-size: 14pt;
+}
+
 .user-age {
     font-weight: 300;
 }
