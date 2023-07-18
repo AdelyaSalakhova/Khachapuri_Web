@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand container-fluid" id="navbarSupportedContent">
         <ul class="navbar-nav top-menu justify-content-start">
             <li class="nav-item">
-                <a class="nav-link logo" href="index.html"><img style="height: 60px" src="img/logo-финал.svg"
+                <a class="nav-link logo" href="index.php"><img style="height: 60px" src="img/logo-финал.svg"
                                                                 alt=""></a>
             </li>
         </ul>
@@ -212,18 +212,19 @@
     </form>
     <div class="container col-lg-8 col-12 col-sm-12 px-sm-4 px-4 mb-4">
         <?php
+        require 'main.php';
         foreach ($dishes as $dish):?>
         <div class="card mb-3">
             <div class="row g-0">
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <img src="<?=$dish['image']?>" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <span class="dish-name"><?=$dish['name_dish']?></span>
                             <span>Рейтинг - <span class='rating'><?=$dish['rating']?></span> <i class="fa-solid fa-star"
-                                                                               style="color: #ffcf48;"></i></span>
+                                                                                                style="color: #ffcf48;"></i></span>
                         </div>
                         <p class="card-text"><?=$dish['description']?></p>
                         <a class="card-text" href="recipe.html"><small class="">Перейти к рецепту</small></a>

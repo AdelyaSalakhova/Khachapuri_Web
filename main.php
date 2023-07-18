@@ -16,4 +16,3 @@ while ($dishInfo = $result->fetch()) {
     $dishes[] = $dishInfo;
 }
 
-include 'index.php';
