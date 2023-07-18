@@ -203,18 +203,6 @@
                             Салаты
                         </label>
                     </li>
-                    <li class="form-check col-lg-2">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckVegan">
-                        <label class="form-check-label" for="flexCheckVegan">
-                            Вегатерианские блюда
-                        </label>
-                    </li>
-                    <li class="form-check col-lg-2">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckMeat">
-                        <label class="form-check-label" for="flexCheckMeat">
-                            Мясные блюда
-                        </label>
-                    </li>
                 </ul>
                 <div class="col-12 d-flex justify-content-center">
                     <button class="btn btn-primary btn-categories" type="submit">Применить</button>
@@ -222,137 +210,29 @@
             </div>
         </div>
     </form>
-    <div class="container col-lg-8 col-12 col-sm-12 px-sm-4 px-4">
+    <div class="container col-lg-8 col-12 col-sm-12 px-sm-4 px-4 mb-4">
+        <?php
+        foreach ($dishes as $dish):?>
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-2">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
+                    <img src="<?=$dish['image']?>" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-10">
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
-                            <span class="dish-name">Суп из слез Романа Широкова</span>
-                            <span>Рейтинг - <span class='rating'>5.0</span> <i class="fa-solid fa-star"
+                            <span class="dish-name"><?=$dish['name_dish']?></span>
+                            <span>Рейтинг - <span class='rating'><?=$dish['rating']?></span> <i class="fa-solid fa-star"
                                                                                style="color: #ffcf48;"></i></span>
                         </div>
-                        <p class="card-text">Просто описание рецепта, какой он хороший и вкусный, все должны его
-                            приготовить и съесть!</p>
+                        <p class="card-text"><?=$dish['description']?></p>
                         <a class="card-text" href="recipe.html"><small class="">Перейти к рецепту</small></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-2">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-10">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span class="dish-name">Суп из слез Романа Широкова</span>
-                            <span>Рейтинг - <span class='rating'>5.0</span> <i class="fa-solid fa-star"
-                                                                               style="color: #ffcf48;"></i></span>
-                        </div>
-                        <p class="card-text">Просто описание рецепта, какой он хороший и вкусный, все должны его
-                            приготовить и съесть!</p>
-                        <a class="card-text" href="recipe.html"><small class="">Перейти к рецепту</small></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-2">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-10">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span class="dish-name">Суп из слез Романа Широкова</span>
-                            <span>Рейтинг - <span class='rating'>5.0</span> <i class="fa-solid fa-star"
-                                                                               style="color: #ffcf48;"></i></span>
-                        </div>
-                        <p class="card-text">Просто описание рецепта, какой он хороший и вкусный, все должны его
-                            приготовить и съесть!</p>
-                        <a class="card-text" href="recipe.html"><small class="">Перейти к рецепту</small></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-2">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-10">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span class="dish-name">Суп из слез Романа Широкова</span>
-                            <span>Рейтинг - <span class='rating'>5.0</span> <i class="fa-solid fa-star"
-                                                                               style="color: #ffcf48;"></i></span>
-                        </div>
-                        <p class="card-text">Просто описание рецепта, какой он хороший и вкусный, все должны его
-                            приготовить и съесть!</p>
-                        <a class="card-text" href="recipe.html"><small class="">Перейти к рецепту</small></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-2">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-10">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span class="dish-name">Суп из слез Романа Широкова</span>
-                            <span>Рейтинг - <span class='rating'>5.0</span> <i class="fa-solid fa-star"
-                                                                               style="color: #ffcf48;"></i></span>
-                        </div>
-                        <p class="card-text">Просто описание рецепта, какой он хороший и вкусный, все должны его
-                            приготовить и съесть!</p>
-                        <a class="card-text" href="recipe.html"><small class="">Перейти к рецепту</small></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php endforeach?>
     </div>
-    <nav aria-label="..." class="d-flex justify-content-center py-3">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link active" onclick="scrolling(this)">1</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">3</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">4</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">5</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">6</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">7</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">8</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">9</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" onclick="scrolling(this)">10</a>
-            </li>
-        </ul>
-    </nav>
     <footer class="text-center text-lg-start">
         <div class="container py-4 px-1">
             <div class="row justify-content-center">

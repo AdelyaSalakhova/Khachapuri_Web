@@ -321,23 +321,6 @@ body{
     box-shadow: 0 0 0 0.25rem rgb(185 88 40 / 25%);
 }
 
-.pagination {
-    --bs-pagination-padding-x: 1rem;
-    --bs-pagination-padding-y: 0.5rem;
-    --bs-pagination-font-size: 1.2rem;
-    --bs-pagination-color: #000;
-    --bs-pagination-bg: rgb(252, 231, 140);
-    --bs-pagination-border-color: #000;
-    --bs-pagination-hover-color: rgb(185, 88, 40);
-    --bs-pagination-hover-bg: rgb(252, 231, 140), brightness(100%);
-    --bs-pagination-hover-border-color: rgb(185, 88, 40);
-    --bs-pagination-focus-color: rgb(185, 88, 40);
-    --bs-pagination-focus-bg: rgb(252, 231, 140), brightness(100%);
-    --bs-pagination-focus-box-shadow: 0 0 0 0.25 rgb(185 88 40 / 25%);
-    --bs-pagination-active-color: #000;
-    --bs-pagination-active-bg: rgb(185, 88, 40);
-    --bs-pagination-active-border-color: #000;
-}
 /*Body*/
 
 /*Favorite*/

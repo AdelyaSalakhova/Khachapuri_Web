@@ -86,18 +86,6 @@ function login() {
         '                                </form>'
 }
 
-function scrolling(clicked) {
-    window.scrollTo(0, 2000);
-    document.querySelector('.active').classList.remove('active')
-    clicked.classList.add('active')
-}
-
-function scrolling_fav(clicked) {
-    window.scrollTo(0, 400);
-    document.querySelector('.active').classList.remove('active')
-    clicked.classList.add('active')
-}
-
 function favor() {
     document.querySelector('.favorite').innerHTML = '<i onclick="unfavor()" class="fa-solid fa-heart fav"></i>'
 }
