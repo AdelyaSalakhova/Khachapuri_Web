@@ -1,4 +1,5 @@
 <?php
+
 class PdoConnect {
     private const HOST = 'localhost';
     private const DB = 'khachapuri';
@@ -11,7 +12,8 @@ class PdoConnect {
     protected $OPD;
     public $PDO;
 
-    private function __construct() {
+    private function __construct()
+    {
 
         $this->DSN = "mysql:host=" . self::HOST . ";dbname=" . self::DB . ";charset=" . self::CHARSET;
 
@@ -24,7 +26,8 @@ class PdoConnect {
         $this->PDO = new PDO($this->DSN, self::USER, self::PASS, $this->OPD);
     }
 
-    public static function getInstance() {
+    public static function getInstance()
+    {
 
         if (self::$_instance === null)
             self::$_instance = new self;
@@ -32,6 +35,9 @@ class PdoConnect {
         return self::$_instance;
     }
 
-    private function __clone() {}
-    private function __wakeup() {}
+    private function __clone() {
+    }
+
+    public function __wakeup() {
+    }
 }
