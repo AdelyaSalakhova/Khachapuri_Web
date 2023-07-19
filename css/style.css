@@ -124,6 +124,11 @@ body{
     background-color: black;
     color: rgb(252, 231, 140);
 }
+
+.info-block .btn {
+    font-size: 20pt;
+}
+
 .info-block .row {
     padding: 10px;
     overflow: hidden;
@@ -141,6 +146,22 @@ body{
 .info-block .img {
     height: auto;
     max-width: 100%;
+}
+
+.btn-scroll {
+    float: right;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    visibility: hidden;
+    border-radius: 50%;
+    font-size: 18pt;
+    opacity: 0;
+}
+
+.btn-scroll.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .recipe-block {
@@ -169,32 +190,72 @@ body{
     max-height: 400px;
 }
 
-.card {
-    border: black 2px solid;
-    overflow: hidden;
-}
-
-.card img {
-    height: auto;
-    max-width: 100%;
-    margin: 0 10px 0 0;
-}
-
-.card-border {
-    border: 2px solid black;
-}
-
-.card-body a {
-    color: rgb(185, 88, 40);
-}
-
-.card-body a:hover {
-    filter: brightness(120%);
+.recipe-card {
+    border: black 1px solid;
+    border-radius: 5%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
     transition: all .3s;
 }
 
-.dish-name, .user-name {
+.recipe-card:hover {
+    box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.95);
+}
+
+.recipe-thumb a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    color: rgb(185, 88, 40);
+    margin-top: 10px;
+}
+
+.recipe-thumb img{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 5%;
+    box-shadow: 0 10px 10px -5px black;
+}
+
+.recipe-details {
+    padding: 20px;
+}
+
+.recipe-details h4 a {
     font-weight: 500;
+    font-size: 20pt;
+    display: block;
+    color: rgb(185, 88, 40);
+    height: 65px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.recipe-descr {
+    font-size: 15px;
+    height: 90px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.rating {
+    font-size: 16pt;
+}
+
+.dish-name:hover {
+    filter: brightness(120%);
+}
+
+.recipe-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.user-name {
+    font-weight: 500;
+    font-size: 20pt;
 }
 .fa-heart {
     color: #ff0000;

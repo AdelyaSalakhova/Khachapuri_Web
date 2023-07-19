@@ -86,6 +86,8 @@
                 уникальные блюда,
                 которые могут варьироваться от региона к региону, но всегда отличаются высоким качеством и необычными
                 сочетаниями продуктов.
+                <br><br>
+                <button class="btn btn-primary btn-categories" type="button" onclick='Go_to_recipes()'>Перейти к рецептам</button>
             </div>
         </div>
     </div>
@@ -93,7 +95,7 @@
 <div class="parallax">
     <div class="parallax-img"></div>
 </div>
-<div class="container-fluid block">
+<div class="container-fluid block" id="recipe-block">
     <div class="row justify-content-between p-3">
         <div class="col">
             <button class="btn btn-primary btn-categories" type="button" data-bs-toggle="collapse"
@@ -108,64 +110,7 @@
     </div>
     <form>
         <div class="collapse px-3" id="collapseCategories">
-            <div class="col-12 card card-body d-inline-block">
-                <ul class="me-0 counties_list row">
-                    <li class="form-check col-lg-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckArmyan">
-                        <label class="form-check-label" for="flexCheckArmyan">
-                            Армянская кухня
-                        </label>
-                    </li>
-                    <li class="form-check col-lg-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckAzer">
-                        <label class="form-check-label" for="flexCheckAzer">
-                            Азербайджанская кухня
-                        </label>
-                    </li>
-                    <li class="form-check col-lg-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckGruz">
-                        <label class="form-check-label" for="flexCheckGruz">
-                            Грузинская кухня
-                        </label>
-                    </li>
-                    <li class="form-check col-lg-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckAvar">
-                        <label class="form-check-label" for="flexCheckAvar">
-                            Аварская кухня
-                        </label>
-                    </li>
-                    <li class="form-check col-lg-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckLezg">
-                        <label class="form-check-label" for="flexCheckLezg">
-                            Лезгинская кухня
-                        </label>
-                    </li>
-                    <li class="form-check col-lg-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckKabard">
-                        <label class="form-check-label" for="flexCheckKabard">
-                            Кабардинская кухня
-                        </label>
-                    </li>
-                    <li class="form-check col-lg-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckOsetin">
-                        <label class="form-check-label" for="flexCheckOsetin">
-                            Осетинская кухня
-                        </label>
-                    </li>
-                    <li class="form-check col-lg-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCherk">
-                        <label class="form-check-label" for="flexCheckCherk">
-                            Черкесская кухня
-                        </label>
-                    </li>
-                    <li class="form-check col">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDag">
-                        <label class="form-check-label" for="flexCheckDag">
-                            Дагестанская кухня
-                        </label>
-                    </li>
-                </ul>
-                <hr>
+            <div class="col-3 card card-body d-flex">
                 <ul class="col-4 me-0 row counties_list">
                     <li class="form-check col-lg-3">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckSoup">
@@ -210,30 +155,37 @@
             </div>
         </div>
     </form>
-    <div class="container col-lg-8 col-12 col-sm-12 px-sm-4 px-4 mb-4">
-        <?php
-        require 'main.php';
-        foreach ($dishes as $dish):?>
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="<?=$dish['image']?>" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span class="dish-name"><?=$dish['name_dish']?></span>
-                            <span>Рейтинг - <span class='rating'><?=$dish['rating']?></span> <i class="fa-solid fa-star"
-                                                                                                style="color: #ffcf48;"></i></span>
+    <section class="container px-4 mb-4">
+        <div class="row">
+            <?php
+            require 'main.php';
+            foreach ($dishes as $dish): ?>
+            <div class="col-lg-4 col-sm-6 py-2">
+                <div class="recipe-card">
+                    <div class="recipe-thumb">
+                        <a href="recipe.php?id=<?= $dish['id_dish']-1?>"><img src="<?= $dish['image'] ?>" alt="..."></a>
+                    </div>
+                    <div class="recipe-details">
+                        <h4><a href="recipe.php?id=<?= $dish['id_dish']-1?>" class="dish-name"><?= $dish['name_dish'] ?></a></h4>
+                        <p class="rating">Рейтинг - <?= $dish['rating'] ?> <i class="fa-solid fa-star"
+                                                                              style="color: #ffcf48;"></i>
+                        </p>
+                        <p class="recipe-descr"><?= $dish['description'] ?></p>
+                    </div>
+                    <div class="recipe-bottom-details d-flex justify-content-between">
+                        <div>
+                            <i class="fa-regular fa-clock"></i> <?= $dish['time'] ?>
                         </div>
-                        <p class="card-text"><?=$dish['description']?></p>
-                        <a class="card-text" href="recipe.html"><small class="">Перейти к рецепту</small></a>
+                        <div>
+                            <i class="fa-solid fa-fire"
+                               style="color: rgb(185, 88, 40);"></i></i> <?= $dish['calories'] ?> ккал
+                        </div>
                     </div>
                 </div>
             </div>
+            <?php endforeach ?>
         </div>
-        <?php endforeach?>
-    </div>
+    </section>
     <footer class="text-center text-lg-start">
         <div class="container py-4 px-1">
             <div class="row justify-content-center">
@@ -263,7 +215,7 @@
         </div>
         <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
             © 2023 Copyright:
-            <a class="text" href="index.html" style='color: rgb(185, 88, 40);'>Khach&puri.com</a>
+            <a class="text" href="index.php" style='color: rgb(185, 88, 40);'>Khach&puri.com</a>
         </div>
     </footer>
 </div>

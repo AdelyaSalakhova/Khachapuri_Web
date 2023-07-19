@@ -21,7 +21,6 @@
         crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/a85428af7b.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
-
 <div class="full_header">
     <nav class="navbar navbar-expand container-fluid" id="navbarSupportedContent">
         <ul class="navbar-nav top-menu justify-content-start">
@@ -39,6 +38,9 @@
         </ul>
     </nav>
 </div>
+<?php
+    require "main.php";
+?>
 <div class="recipe-block container my-5 py-3 px-4">
     <div class="row justify-content-center">
         <div class="col-6 d-none d-lg-block m-auto">
@@ -73,67 +75,29 @@
             <div>
                 <div class="d-flex justify-content-between">
                     <span class="dish-name">
-                        Название&nbsp;
+                        <?= $dishes[$recipe_id]['name_dish'] . " "?>
                         <span class="favorite">
                             <i onclick="favor()" class="fa-regular fa-heart non-fav"></i>
                         </span>
                     </span>
-                    <span>Рейтинг - <span class='rating'>5.0</span> <i class="fa-solid fa-star" style="color: #ffcf48;"></i></span>
+                    <span>Рейтинг - <span class='rating'><?= $dishes[$recipe_id]['rating']?></span> <i class="fa-solid fa-star" style="color: #ffcf48;"></i></span>
                 </div>
                 <hr>
-                <div class="cn d-flex justify-content-between">
-                    <span>Категории:</span>
-                    <span class="category-name">Основные блюда, Грузинская кухня</span>
-                </div>
                 <div class="d-flex justify-content-between">
                     <span>Список продуктов: </span>
                     <span>Количество</span>
                 </div>
                 <div class="products-list d-flex justify-content-between">
                     <ul>
+                        <?php
+                        foreach ($products as $product):?>
                         <li>
-                            <span class="product">Куриное филе</span>
+                            <span class="product"><?= $product['product_name']?></span>
                             <div>
-                                <span class="product-amount">700</span> <span class="product-metric">гр.</span>
+                                <span class="product-amount"><?= $product['amount']?></span> <span class="product-metric"><?= $product['measure']?></span>
                             </div>
                         </li>
-                        <li>
-                            <span class="product">Картофель</span>
-                            <div>
-                                <span class="product-amount">300</span> <span class="product-metric">гр.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="product">Лук репчатый</span>
-                            <div>
-                                <span class="product-amount">2</span> <span class="product-metric">ср. шт.</span></span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="product"><span class="product-metric">Соль, перец</span></span>
-                            <div>
-                                <span class="product-amount"></span><span class="product-metric">По вкусу</span>
-
-                            </div>
-                        </li>
-                        <li>
-                            <span class="product">Вода</span>
-                            <div>
-                                <span class="product-amount">0.5</span><span class="product-metric"> л</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="product">Тест</span>
-                            <div>
-                                <span class="product-amount">0.5</span><span class="product-metric"> л</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="product">Тест</span>
-                            <div>
-                                <span class="product-amount">0.5</span><span class="product-metric"> л</span>
-                            </div>
-                        </li>
+                        <?php endforeach?>
                     </ul>
                 </div>
                 <div class="row d-flex justify-content-between">
@@ -150,8 +114,8 @@
                                 </button>
                             </span>
                         </div>
-                        <div>Время приготовления: <span class="time">60 мин.</span></div>
-                        <div>Калорийность: <span class="calories">999</span> ккал. на 100гр.</div>
+                        <div>Время приготовления: <span class="time"><?= $dishes[$recipe_id]['time']?></span></div>
+                        <div>Калорийность: <span class="calories"><?= $dishes[$recipe_id]['calories']?></span> ккал на 100гр</div>
                     </div>
                 </div>
             </div>
@@ -167,7 +131,7 @@
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body recipe-description">
-                    Здесь находится описание рецепта. ЛОРПШЗЩЛОРПАЕНГШЛО РПЕНГШЛАРЦЩКШПГРЩУРПШГЫВр пГШЦРРЗПШШГ ЦПЗШЦГгразцгуупгрцз шгшпрцзарфзвшвмрцзщ укойшаоцз арыддсы жвапрщуарфщвп
+                    <?= $dishes[$recipe_id]['description']?>
                 </div>
             </div>
         </div>
@@ -179,7 +143,7 @@
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body recipe-history">
-                    Здесь находится история рецепта. Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла блаБла бла бла Бла бла бла Бла бла бла Бла бла блаБла бла бла Бла бла бла Бла бла бла Бла бла бла
+                    <?= $dishes[$recipe_id]['history']?>
                 </div>
             </div>
         </div>
