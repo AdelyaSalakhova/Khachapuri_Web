@@ -11,8 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" size="32x32" href="img/icon%20копия.png">
-
-    <title>Сюда название надо рецепта</title>
+    <?php
+    require "main.php";
+    ?>
+    <title><?= $dishes[$recipe_id]['name_dish']?></title>
 
 </head>
 <body class="wrapping">
@@ -38,9 +40,6 @@
         </ul>
     </nav>
 </div>
-<?php
-    require "main.php";
-?>
 <div class="recipe-block container my-5 py-3 px-4">
     <div class="row justify-content-center">
         <div class="col-6 d-none d-lg-block m-auto">
@@ -51,15 +50,20 @@
                     <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
+                    <?php
+                    $first = true;
+                    foreach ($pics as $pic):
+                    if ($first) {?>
                     <div class="carousel-item active">
-                        <img src="/img/main1.jpeg" class="d-block w-100" alt="...">
+                        <img src="<?= $pic['dish_pic']?>" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item">
-                        <img src="/img/main2.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/main3.jpg" class="d-block w-100" alt="...">
-                    </div>
+                    <?php $first = false;
+                    }
+                    else {?>
+                        <div class="carousel-item">
+                            <img src="<?= $pic['dish_pic']?>" class="d-block w-100" alt="...">
+                        </div>
+                    <?php } endforeach?>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -74,7 +78,7 @@
         <div class="col-lg-6 col-sm-12">
             <div>
                 <div class="d-flex justify-content-between">
-                    <span class="dish-name">
+                    <span class="dish-name" style="font-size: 20pt; font-weight: 500;">
                         <?= $dishes[$recipe_id]['name_dish'] . " "?>
                         <span class="favorite">
                             <i onclick="favor()" class="fa-regular fa-heart non-fav"></i>
@@ -155,35 +159,21 @@
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
                 <div class="accordion-body recipe-steps">
+                    <?php
+                    foreach ($steps as $step):?>
                     <div class="step">
-                        <h4>Шаг 1.</h4>
+                        <h4><?= $step['step_name']?></h4>
                         <div class="row">
                             <div class="step-photo">
-                                <img class="img-fluid" src="img/step1.jpg" alt="">
+                                <img class="img-fluid" src="<?= $step['step_image']?>" alt="">
                                 <span class="step-description">
-                                    Возьмите курицу и нарежьте на небольшие кусочки, не отрежьте себе все пальцы пж, они вам еще понадобятся, надеюсь, что хоть с этой задачей вам по силам справиться
-                                    Возьмите курицу и нарежьте на небольшие кусочки, не отрежьте себе все пальцы пж, они вам еще понадобятся, надеюсь, что хоть с этой задачей вам по силам справиться
-                                    Возьмите курицу и нарежьте на небольшие кусочки, не отрежьте себе все пальцы пж, они вам еще понадобятся, надеюсь, что хоть с этой задачей вам по силам справиться
-                                    Возьмите курицу и нарежьте на небольшие кусочки, не отрежьте себе все пальцы пж, они вам еще понадобятся, надеюсь, что хоть с этой задачей вам по силам справиться
+                                    <?= $step['step_descr']?>
                                 </span>
                             </div>
                         </div>
                     </div>
                     <hr>
-                    <div class="step">
-                        <h4>Шаг 2.</h4>
-                        <div class="row">
-                            <div class="step-photo">
-                                <img class="img-fluid" src="img/step1.jpg" alt="">
-                                <span class="step-description">
-                                    Возьмите курицу и нарежьте на небольшие кусочки, не отрежьте себе все пальцы пж, они вам еще понадобятся, надеюсь, что хоть с этой задачей вам по силам справиться
-                                    Возьмите курицу и нарежьте на небольшие кусочки, не отрежьте себе все пальцы пж, они вам еще понадобятся, надеюсь, что хоть с этой задачей вам по силам справиться
-                                    Возьмите курицу и нарежьте на небольшие кусочки, не отрежьте себе все пальцы пж, они вам еще понадобятся, надеюсь, что хоть с этой задачей вам по силам справиться
-                                    Возьмите курицу и нарежьте на небольшие кусочки, не отрежьте себе все пальцы пж, они вам еще понадобятся, надеюсь, что хоть с этой задачей вам по силам справиться
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach?>
                 </div>
             </div>
         </div>

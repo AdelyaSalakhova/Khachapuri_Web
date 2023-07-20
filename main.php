@@ -18,10 +18,9 @@ while ($dishInfo = $result->fetch()) {
 
 $url = $_SERVER['REQUEST_URI'];
 
-if ($url != '/index.php') {
+if ($url != ('/index.php')) {
     // Разбираем URL на составляющие
     $url_parts = parse_url($url);
-
     // Разбираем параметры запроса на ассоциативный массив
     parse_str($url_parts['query'], $query_params);
 
@@ -31,10 +30,27 @@ if ($url != '/index.php') {
 	    JOIN products ON product_id_product = id_product
 	    WHERE dish_id_dish = $recipe_id+1;
 	");
-
     $products = array();
     while ($prodInfo = $result_products->fetch()) {
         $products[] = $prodInfo;
+    }
+
+    $result_steps = $PDO->PDO->query("
+        SELECT step_descr, step_image, step_name FROM steps
+        WHERE dish_id_dish= $recipe_id+1; 
+    ");
+    $steps = array();
+    while ($stepInfo = $result_steps->fetch()) {
+        $steps[] = $stepInfo;
+    }
+
+    $result_pics = $PDO->PDO->query("
+        SELECT dish_pic FROM dish_pics
+	    WHERE id_dish = $recipe_id+1; 
+    ");
+    $pics = array();
+    while ($picsInfo = $result_pics->fetch()) {
+        $pics[] = $picsInfo;
     }
 }
 

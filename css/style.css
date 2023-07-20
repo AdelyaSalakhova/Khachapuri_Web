@@ -234,6 +234,9 @@ body{
 .recipe-descr {
     font-size: 15px;
     height: 90px;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -241,6 +244,8 @@ body{
 .rating {
     font-size: 16pt;
 }
+
+
 
 .dish-name:hover {
     filter: brightness(120%);
