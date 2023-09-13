@@ -4,10 +4,11 @@ spl_autoload_register(function ($class) {
     include 'classes/' . $class . '.php';
 });
 
+
 $PDO = PdoConnect::getInstance();
 
 $result = $PDO->PDO->query("
-		SELECT * FROM `dish`
+		SELECT * FROM dish
 	");
 
 $dishes = array();
@@ -17,10 +18,9 @@ while ($dishInfo = $result->fetch()) {
 }
 
 $url = $_SERVER['REQUEST_URI'];
-
-if ($url != ('/index.php')) {
-    // Разбираем URL на составляющие
-    $url_parts = parse_url($url);
+// Разбираем URL на составляющие
+$url_parts = parse_url($url);
+if ($url_parts['path'] == '/recipe.php') {
     // Разбираем параметры запроса на ассоциативный массив
     parse_str($url_parts['query'], $query_params);
 
@@ -53,4 +53,5 @@ if ($url != ('/index.php')) {
         $pics[] = $picsInfo;
     }
 }
+
 

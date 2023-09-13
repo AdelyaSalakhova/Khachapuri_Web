@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/icon%20копия.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <?php include_once 'components/head.php' ?>
 
     <title>Избранное</title>
 </head>
 
 <body class="wrapping">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/a85428af7b.js" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
+<?php include_once 'components/scripts.php' ?>
 
 <div class="full_header">
     <nav class="navbar navbar-expand container-fluid" id="navbarSupportedContent">
         <ul class="navbar-nav top-menu justify-content-start">
             <li class="nav-item">
-                <a class="nav-link logo" href="index.html"><img style="height: 60px" src="img/logo-финал.svg"
+                <a class="nav-link logo" href="index.php"><img style="height: 60px" src="img/logo-финал.svg"
                                                                 alt=""></a>
-            </li>
-        </ul>
-        <ul class="navbar-nav icon-menu justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link" href="account.html" data-bs-toggle="modal" data-bs-target="#UserModal">
-                    <i class="fa-regular fa-user"></i>
-                </a>
             </li>
         </ul>
     </nav>
@@ -48,7 +26,7 @@
             <div class="collapse navbar-collapse" style="max-width: 100%;" id="navbarA">
                 <ul class="navbar-nav">
                     <li class="nav-item-secondary">
-                        <a class="nav-link" href="account.html">
+                        <a class="nav-link" href="account.php">
                             <span><i class="fa-regular fa-user"></i>&nbsp;&nbsp;Профиль</span>
                         </a>
                     </li>

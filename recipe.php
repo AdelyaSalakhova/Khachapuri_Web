@@ -33,7 +33,7 @@
         </ul>
         <ul class="navbar-nav icon-menu justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="account.html">
+                <a class="nav-link" href="account.php">
                     <i class="fa-regular fa-user"></i>
                 </a>
             </li>
@@ -44,11 +44,6 @@
     <div class="row justify-content-center">
         <div class="col-6 d-none d-lg-block m-auto">
             <div id="carouselMain" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
                 <div class="carousel-inner">
                     <?php
                     $first = true;
@@ -159,21 +154,20 @@
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
                 <div class="accordion-body recipe-steps">
-                    <?php
-                    foreach ($steps as $step):?>
-                    <div class="step">
-                        <h4><?= $step['step_name']?></h4>
-                        <div class="row">
-                            <div class="step-photo">
-                                <img class="img-fluid" src="<?= $step['step_image']?>" alt="">
-                                <span class="step-description">
-                                    <?= $step['step_descr']?>
-                                </span>
+                    <?php foreach ($steps as $index => $step): ?>
+                        <div class="step">
+                            <h4><?= $step['step_name'] ?></h4>
+                            <div class="row">
+                                <div class="step-photo">
+                                    <img class="img-fluid" src="<?= $step['step_image'] ?>" alt="">
+                                    <span class="step-description"><?= $step['step_descr'] ?></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <hr>
-                    <?php endforeach?>
+                        <?php if ($index < count($steps) - 1): ?>
+                            <hr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

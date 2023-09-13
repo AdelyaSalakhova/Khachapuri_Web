@@ -1,26 +1,21 @@
+<?php
+require_once __DIR__ . '/actions/helpers.php';
+
+//checkAuth();
+
+$user = currentUser();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="
-        stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-          crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/icon%20копия.png">
+    <?php include_once 'components/head.php' ?>
 
     <title>Khach&puri - рецепты кавказской кухни</title>
 
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/a85428af7b.js" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
+<?php include_once 'components/scripts.php' ?>
 <div class="full_header">
     <nav class="navbar navbar-expand container-fluid" id="navbarSupportedContent">
         <ul class="navbar-nav top-menu justify-content-start">
@@ -31,41 +26,16 @@
         </ul>
         <ul class="navbar-nav icon-menu justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signModal">
-                    <!--href="account.html"-->
-                    <i class="fa-regular fa-user"></i>
-                </a>
-                <div class="modal fade" id="signModal" tabindex="-1" aria-labelledby="signModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content" id="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="signModalLabel">Вход</h3>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                            </div>
-                            <form>
-                                <div class="modal-body modal-inputs">
-                                    <div class="mb-2">
-                                        <label for="exampleFormControlInput1" class="form-label mb-0">Ваш Email</label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                                               placeholder="name@example.com" required>
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="inputPassword" class="col-sm-2 col-form-label mb-0">Пароль</label>
-                                        <div class="password">
-                                            <input type="password" class="form-control" id="inputPassword" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer d-flex justify-content-between">
-                                    <a class="reg" onclick="registration()">Нет аккаунта?</a>
-                                    <button type="submit" class="btn btn-primary btn-log-in btn-sign-in">Войти</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <?php if ($user): ?>
+                    <a class="nav-link d-inline" href="account.php">
+                        <i class="fa-regular fa-user"></i> <?php echo $user['name'] ?>
+                    </a>
+                <?php endif; ?>
+                <?php if (!$user): ?>
+                    <a class="nav-link d-inline" href="registration.php">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </a>
+                <?php endif; ?>
             </li>
         </ul>
     </nav>
